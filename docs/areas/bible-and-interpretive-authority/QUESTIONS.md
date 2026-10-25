@@ -170,3 +170,48 @@ These are deliberate **changes in measured wording**, not merely new button labe
 A plausible coherent position is: **some properly authorized, formal doctrinal decisions are conscience-binding, but an ordinary local pastor's interpretation or congregational advice is not**. An unqualified “Must you follow the church rather than your own interpretation?” forces this view into a misleading Yes or No. In the new question, **ever** allows a truthful Yes without asserting universal binding force. This solves only the **existence** distinction; it does not measure *which* conditions qualify. Another coherent position gives church teaching serious, perhaps mandatory, **consideration** without requiring **assent** against an unconvinced reading; this corresponds to No on the narrowly defined duty, not to wholesale rejection of church authority.
 
 A split into separate questions about a church's formal competence and the binding effect of a particular decision remains possible **if** blind testing finds the existential question too abstract or insufficiently discriminating. Do not split or add “It depends” automatically. Residual ambiguity about *church*, *authority*, *accept*, and whether a moral duty to assent is intelligible must be tested without priming the respondent.
+
+---
+
+## Test battery — Case B: interpretive weight of long-standing Christian agreement (2026-10-25)
+
+**Status:** Independent small response-structure experiment, **not** an accepted question set. [Try the standalone case B prototype](../../../prototypes/relevance-routing/case-b-tradition-presumption.html). All older private-practice, B, B2 and conscience-binding prototypes remain baselines.
+
+**Exact intended measured dimension:** What *independent interpretive weight* should cross-generational agreement among Christian teachers have when assessing a biblical passage, *apart from their actual exegetical arguments*? This is **not** a claim that any teacher's interpretation is correct and is **not** a measurement of conscience-binding ecclesial jurisdiction, public obedience, or ultimate authority over Scripture. Unlike the earlier case A, this is not meant to have only two settled positions.
+
+**Measured context:** A Bible passage has more than one plausible reading. Many Christian teachers over several generations have favored one of them. No specific teaching is stipulated to be infallible. The probe is about the *agreement itself*, not the texts or reasoning offered in its defense.
+
+**Q1 — Independent weight** (\`weight\`)
+
+> Apart from the reasons those teachers give, how much weight should their long-standing agreement itself carry when deciding what the passage means?
+
+Three mutually exclusive **substantive** answers, ordered from strongest to weakest independent weight:
+
+- \`decisive\`: **Decisive** — The long-standing agreement is enough, by itself, to settle which interpretation I ought to affirm.
+- \`rebuttable\`: **A starting preference that can be overturned** — The agreement is a reason to favor that interpretation, but stronger grounds can outweigh it.
+- \`none\`: **No independent preference** — The agreement itself gives no added reason to favor the interpretation; its arguments must be assessed.
+
+Separate, smaller actions: \`unsettled\` (“I don't have a settled view on this”) and diagnostic \`unrepresented\` (“My settled view isn't represented”). **Do not** interpret \`unrepresented\` as uncertain or as a new doctrinal profile. There is no generic “It depends” option.
+
+**Q2 — Conditional follow-up, asked only after \`rebuttable\`** (\`own_scripture_suffices\`)
+
+> Could your own careful study of Scripture ever be enough to set aside that initial preference, even without wider agreement?
+
+- \`yes\`: This *one* kind of evidence could sometimes suffice without broader agreement.
+- \`no\`: Personal scriptural judgment on its own would not suffice; the additional necessary grounds or process are **not** inferred.
+- \`unsettled\`: No formed answer *to this narrower sufficiency question*, while the parent's rebuttable view remains established.
+- \`unrepresented\`: A formed condition is missing from this follow-up; infer nothing about its content.
+
+All routes show bounded textual inferences, with Back and reset. The optional example describes the three possible weights only; it is not an independently measured doctrinal scenario.
+
+### Why three and why a single follow-up?
+
+The middle view is **not** the “decisive” view (it permits defeat by better evidence) and **not** the “no independent preference” view (it grants some independent evidential reason). These are three different **strengths of the same kind of interpretive standing**, not an attempt to combine a duty of inward assent with outward conformity or to rank Scripture against the church. A second question identifies one possible condition for overturning the middle view without pretending to exhaust its criteria.
+
+### Bounded inferences and known risks
+
+A main answer concerns **only** the independent standing of the described intergenerational agreement. It does **not** identify an acceptable source of doctrine, actual belief about any passage, the legitimacy of any denomination, the authority of apostolic tradition, or a personal duty to accept a church order. \`rebuttable+yes\` does not indicate that the person **has** departed from a particular teaching; \`rebuttable+no\` does not prove a formal church ruling is required.
+
+Potential unrepresented *formed* positions include treating the agreement differently depending on whether teachers were truly apostolic, whether their agreement spans the whole church, whether the subject is essential doctrine, or whether a teaching has been formally adopted. Do **not** classify these automatically as uncertain. Because the Q1 context deliberately fixes only intergenerational agreement, rather than a specific church authority claim, some respondents may report a missing distinction. The diagnostic action makes this failure visible but does not solve it.
+
+For conceptual orientation only, [the United Methodist Church's theological task](https://www.umc.org/en/content/book-of-discipline-105-our-theological-task) affirms Scripture's primacy and a role for tradition in interpretation, while [David Starling's account of theological interpretation](https://www.thegospelcoalition.org/essay/theological-interpretation-of-scripture/) notes the need to allow received interpretive assumptions to be challenged by Scripture. These illustrate that an intermediate role is a substantive theological possibility; **neither source validates this three-answer scheme as exhaustive or identifies a comparison profile**.
