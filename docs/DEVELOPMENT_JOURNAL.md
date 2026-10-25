@@ -446,9 +446,9 @@ A browser-script check passed for Yes, No, unsettled, editing/reset, and narrow 
 
 ---
 
-## 2026-10-25 — Blind review isolates assent versus compliance as the main wording risk
+## 2026-10-25 — Normal-chat pretest isolates assent versus compliance as the main wording risk
 
-The one-question conscience-binding authority prototype was subjected to a context-isolated Temporary Chat review at Medium reasoning. The reviewer saw only the question and Yes / No / unsettled choices; it was not told the project's purpose, intended inference, explanatory text, or comparison model.
+The one-question conscience-binding authority prototype was given a prompt-restricted review at Medium reasoning. The prompt attempted to simulate a first-time Christian respondent and withheld the project's purpose, intended inference, explanatory text, and comparison model. The test was accidentally run in a **normal ChatGPT conversation rather than Temporary Chat**, so prior context cannot be excluded. It is therefore a pretest, not the clean blind test originally intended.
 
 The review largely reconstructed the intended issue, including the importance of **ever** as an existential rather than universal claim. Its main difficulty was the word **accept**. It independently distinguished between:
 
@@ -457,8 +457,8 @@ The review largely reconstructed the intended issue, including the importance of
 
 That distinction generated an apparently third settled position only while *accept* remained ambiguous. Under the intended assent reading, the reviewer itself recognized that practical submission without assent can still answer **No** to the narrow question.
 
-This is useful because the prototype already attempts to draw exactly that boundary in its explanatory text. The next experiment should therefore test the clarification rather than immediately redesign the binary structure: does defining *accept* as assent, not mere compliance, make the question easier and preserve the intended distinction?
+This was useful because the prototype already attempts to draw exactly that boundary in its explanatory text. In a second pass in the **same normal chat**, the reviewer was given the prototype's short definitions of *ever* and *accept*. It then classified practical submission without assent as **No**, found no clear settled third position outside Yes/No/unsettled, kept its own No answer, and lowered its difficulty rating from **3/5 to 2/5**. The clarification therefore behaved as intended in this pretest.
 
 The review also surfaced a second conceptual boundary: a person may think a church teaching binds when it is genuinely true or scriptural, while denying that **institutional authority itself** creates the duty during continuing disagreement. This remains compatible with No on the current narrow formulation.
 
-The test is not human evidence and does not justify adopting Yes/No as a general questionnaire rule. It is a semantic stress-test result in the project's prototype → observation → correction loop.
+The test is neither human evidence nor a clean blind AI result and does not justify adopting Yes/No as a general questionnaire rule. Repeat the two-pass test from scratch in a fresh Temporary Chat before relying on the finding. It remains a useful semantic pretest in the project's prototype → observation → correction loop.
