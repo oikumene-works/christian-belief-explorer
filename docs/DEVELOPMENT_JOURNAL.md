@@ -482,3 +482,41 @@ Future AI blind tests should therefore distinguish two tasks:
 2. **substantive simulated answering** — which requires an explicitly defined persona if used at all.
 
 Do not treat an unconstrained model's self-selected Christian persona as a neutral human-Christian baseline. The project still needs human comprehension testing.
+
+
+---
+
+## 2026-10-25 — Working hypothesis shifts from binary-first to minimum sufficient response structure
+
+The B2 experiments showed a useful limit of the Yes/No-first direction. Binary questions can be cognitively light and, in some cases, genuinely discriminating. However, there is a risk of changing the theological distinction merely to make it fit a preferred interface.
+
+The new working hypothesis is:
+
+> Use the **smallest response structure that faithfully represents the coherent settled positions** relevant to the distinction being measured.
+
+Current implications:
+
+- Prefer **Yes / No** when the underlying distinction is genuinely binary.
+- Do not preserve binary form by redefining the measured issue merely for interface convenience.
+- If a coherent **settled third or conditional position** genuinely exists, represent it as a substantive answer rather than as uncertainty.
+- Use that third answer as a routing point into narrower follow-up questions, again binary where the next distinction is genuinely binary.
+- Keep **unsettled / no formed view** separate from substantive theological positions.
+- If several considerations can coexist rather than compete on one axis, use a non-exclusive structure such as multi-select instead of false binary opposition.
+
+A generic “It depends” should not be added automatically. First determine whether the problem is:
+1. ambiguous wording or missing context;
+2. two dimensions mixed into one question;
+3. a genuine conditional/third position;
+4. several compatible considerations rather than alternatives.
+
+This is a working design hypothesis, not an accepted project decision.
+
+### Planned stress test
+
+Test the hypothesis with a very small set of contrasting pilot questions:
+
+- one question expected to be genuinely binary;
+- one question with a real settled conditional/third position requiring a follow-up;
+- one question where multiple considerations may legitimately coexist.
+
+For each, test response coverage, safe inference, cognitive burden, and whether routing remains manageable. Uncertainty stays separate in every case. Use blind semantic stress tests and owner hands-on testing before expansion.
