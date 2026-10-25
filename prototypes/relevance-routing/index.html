@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relevance-first entry | Christian Belief Explorer</title>
+<style>
+:root{font:16px/1.5 system-ui,sans-serif;color:#253249;background:#f5f7fa}body{margin:0}main{max-width:43rem;margin:1.5rem auto;padding:1rem}h1{font-size:1.8rem;line-height:1.25}.panel{background:white;border:1px solid #d5dce6;border-radius:.8rem;padding:1.3rem;margin:1rem 0}fieldset{border:0;padding:0;margin:0}legend{font-weight:650;font-size:1.15rem;margin-bottom:1rem}label{display:flex;gap:.7rem;align-items:flex-start;padding:.7rem;border:1px solid #cdd7e3;border-radius:.45rem;margin:.45rem 0}input{margin-top:.35rem;accent-color:#2857a5}button{font:inherit;padding:.65rem 1rem;border-radius:.5rem;background:white;border:1px solid #8190a5;cursor:pointer}button.primary{background:#2857a5;color:white}button:disabled{opacity:.5}.actions{display:flex;gap:.65rem;flex-wrap:wrap;margin:1rem 0}.muted{color:#586779}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e1a836;outline-offset:2px}
+</style></head><body><main>
+<p class="muted">Christian Belief Explorer · Bible and Interpretive Authority · experimental B entry</p>
+<h1>What matters when you decide?</h1>
+<p>This is a short routing experiment, not a test of which authority is highest. You may select several considerations. No tradition scores are calculated.</p>
+<section id="step" class="panel" tabindex="-1" aria-live="polite"></section>
+<div class="actions"><button id="back" type="button">Back</button><button id="reset" type="button">Start over</button></div>
+<p class="muted">Everything runs in this browser page. No answers are sent or stored. This path does not replace the private-practice experiments.</p>
+</main><script>
+'use strict';
+const topics=[
+{id:'bible',label:'What the Bible says',question:'Could examining a relevant biblical passage change your initial judgment about what to do?'},
+{id:'spirit',label:'Guidance of the Holy Spirit',question:'Would you deliberately seek the Holy Spirit’s guidance about what to do?'},
+{id:'conscience',label:'My conscience',question:'Could acting against your settled conscience itself matter to whether the action is wrong before God?'},
+{id:'community',label:'Teaching or rules of a Christian community',question:'Could a Christian community’s teaching or rule affect what you consider right to do?'},
+{id:'reason',label:'My own examination of the circumstances',question:'Could examining the particular circumstances change your initial judgment?'}
+];
+const labels={yes:'Yes',no:'No',depends:'It depends',unsure:'I am not sure'};
+let selected=[],answers={},route=[],index=-1,mode='gate';
+const el=document.getElementById('step');
+function node(tag,txt,parent){const e=document.createElement(tag);e.textContent=txt;parent.appendChild(e);return e;}
+function clear(){el.replaceChildren();document.getElementById('back').disabled=mode==='gate'}
+function gate(){clear();node('h2','What might be relevant?',el);node('p','When thinking through a Christian decision, which of these might matter to you? Select any number. This is about relevance, not ranking or agreement.',el);
+const form=node('form','',el);const fs=node('fieldset','',form);node('legend','Considerations',fs);
+topics.forEach(t=>{const l=node('label','',fs);const c=document.createElement('input');c.type='checkbox';c.value=t.id;c.checked=selected.includes(t.id);l.appendChild(c);node('span',t.label,l)});
+const l=node('label','',fs);const u=document.createElement('input');u.type='checkbox';u.value='unknown';u.checked=selected.includes('unknown');l.appendChild(u);node('span','I am not sure what would be relevant',l);
+fs.addEventListener('change',e=>{const v=e.target.value;if(v==='unknown'&&e.target.checked){fs.querySelectorAll('input').forEach(c=>{if(c!==e.target)c.checked=false})}else if(e.target.checked){u.checked=false}});
+const details=node('details','',form);node('summary','What does this mean? — Example',details);node('p','For example, when deciding whether to follow an unfamiliar practice, you might look for a biblical passage and also ask trusted Christians for advice. Selecting both says only that both may matter.',details);
+const b=node('button','Continue',form);b.className='primary';b.type='submit';form.addEventListener('submit',ev=>{ev.preventDefault();selected=[...fs.querySelectorAll('input:checked')].map(x=>x.value);answers={};route=topics.filter(t=>selected.includes(t.id));index=0;mode=route.length?'follow':'result';render(true)})}
+function follow(){clear();const t=route[index];node('p','Follow-up '+(index+1)+' of '+route.length,el);const form=node('form','',el);const fs=node('fieldset','',form);node('legend',t.question,fs);Object.entries(labels).forEach(([v,label])=>{const l=node('label','',fs);const r=document.createElement('input');r.type='radio';r.name='answer';r.value=v;r.checked=answers[t.id]===v;l.appendChild(r);node('span',label,l)});
+const b=node('button','Continue',form);b.type='submit';b.className='primary';b.disabled=!answers[t.id];fs.addEventListener('change',()=>b.disabled=false);form.addEventListener('submit',ev=>{ev.preventDefault();const checked=fs.querySelector('input:checked');if(!checked)return;answers[t.id]=checked.value;index++;mode=index===route.length?'result':'follow';render(true)})}
+function result(){clear();node('h2','What these answers tell us',el);
+if(selected.includes('unknown'))node('p','You are unsure what might be relevant. No follow-up or theological position was inferred.',el);
+else if(!selected.length)node('p','You did not select any of the listed considerations. That does not establish that none matters to you; the list may be incomplete.',el);
+else{node('p','You identified these considerations as potentially relevant:',el);const ul=node('ul','',el);route.forEach(t=>{const li=node('li',t.label,ul);node('span',' — '+(answers[t.id]==='unsure'?'uncertain about the follow-up':answers[t.id]==='depends'?'conditional answer':answers[t.id]==='yes'?'yes to this specific follow-up':'no to this specific follow-up'),li)})}
+node('p','Relevance is not authority, priority, actual practice, or a claim that you have received divine guidance. A No on a follow-up does not cancel the relevance selection. Unselected topics were not tested and must not be treated as rejected.',el).className='muted';
+node('p','This entry does not establish whether a community can bind conscience or whether violating a particular rule is wrong before God.',el).className='muted'}
+function render(focus){if(mode==='gate')gate();else if(mode==='follow')follow();else result();if(focus)el.focus()}
+document.getElementById('back').addEventListener('click',()=>{if(mode==='result'){if(route.length){index=route.length-1;mode='follow'}else mode='gate'}else if(mode==='follow'){if(index===0)mode='gate';else index--}render(true)});
+document.getElementById('reset').addEventListener('click',()=>{selected=[];answers={};route=[];index=-1;mode='gate';render(true)});render(false);
+</script></body></html>
