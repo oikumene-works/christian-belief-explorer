@@ -176,3 +176,18 @@ The reviewer also distinguished church authority as an independent ground from a
 **Important limitation:** both passes occurred in the same normal chat, and the prompt deliberately asked for ambiguities and non-binary counterexamples. Do not treat this as spontaneous participant evidence, human validation, or a clean blind AI result.
 
 **Prioritized next check:** repeat the entire two-pass sequence from scratch in one fresh **Temporary Chat** at Medium reasoning. First collect the unclarified response; only then provide the two short definitions and collect the second response. Do not mention the normal-chat result to that tester. Do not yet expand the questionnaire, profiles, scoring, or historical parallels. No change to DECISIONS.md.
+
+
+---
+
+## M. Clean Temporary Chat replication and revised blind-test method — 2026-10-25
+
+The conscience-binding question was retested from scratch in a fresh **Temporary Chat**, **Medium** reasoning, personalization disabled.
+
+**Replicated result:** before clarification, the principal ambiguity was again **accept** (inward assent versus practical submission), producing an apparent settled third position. After adding only the prototype's definitions of **ever** and **accept**, that position became clearly **No**, no clear settled third doctrinal position remained, the reviewer's own answer stayed No, and difficulty again fell from **3/5 to 2/5**. This strengthens the narrow hypothesis that the clarification makes this particular Yes/No distinction more semantically stable.
+
+**New methodological finding:** the model spontaneously created a specific Christian theological persona (Scripture as the basis of faith, respect for church teaching/tradition, personal responsibility before God). This is not a neutral cross-Christian respondent. Its own Yes/No answer must therefore not be treated as evidence about a generic Christian response.
+
+**Blind-test method going forward:** use AI blind tests primarily to inspect wording, hidden assumptions, answer coverage, and inference limits. If a substantive simulated answer is wanted, define the persona explicitly rather than asking the model to invent “an ordinary Christian”. Human comprehension testing remains necessary.
+
+**Next project question:** decide whether the current question should now be tested with the optional explanatory example, tested with a real human respondent, or subjected first to a separate high-reasoning adversarial binary-coverage review. No change to DECISIONS.md.
