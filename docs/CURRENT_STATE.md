@@ -163,14 +163,16 @@ The conditional-settled-view problem remains open: a genuine “it depends on a 
 
 ---
 
-## L. First blind review of the B2 doctrinal-authority question — 2026-10-25
+## L. First prompt-restricted pretest of the B2 doctrinal-authority question — 2026-10-25
 
-A fresh Temporary Chat at **Medium** reasoning received only the exact conscience-binding authority question and Yes / No / unsettled choices, with no project context or explanatory text. This was an AI semantic blind review, not a human comprehension test.
+The test was accidentally run in a **normal ChatGPT conversation** at **Medium** reasoning rather than in Temporary Chat. The prompt withheld the project's purpose and explanatory text and asked for a first-time Christian respondent perspective, but prior context cannot be excluded. Treat this as a prompt-restricted AI pretest, **not as the clean blind review originally intended** and not as a human comprehension test.
 
 **Result:** the reviewer substantially recovered the intended distinction and treated **Yes / No** as meaningful opposing positions under one natural reading. Its principal ambiguity was **accept**: genuine assent versus practical submission/compliance. It produced a coherent settled position that submits to church decisions without internally affirming the interpretation; it then noted that this becomes **No**, rather than a third doctrinal answer, if *accept* is explicitly restricted to assent. It rated the question 3/5 in difficulty.
 
 The reviewer also distinguished church authority as an independent ground from a teaching binding because it is actually true or scripturally correct. Its stated limits on what No implies were close to the prototype's intended inference limits.
 
-**Important limitation:** the blind prompt deliberately asked for ambiguities and settled non-binary counterexamples, and the tester was an AI model. Do not treat this as spontaneous participant evidence or human validation.
+**Same-chat clarification result:** after receiving only the prototype's short definitions of **ever** and **accept**, the reviewer said the main ambiguity was resolved. Practical submission without internal assent became **No**, it found no clear settled third doctrinal position outside Yes/No/unsettled, retained its No answer, and lowered difficulty from **3/5 to 2/5**. Remaining ambiguity concerned the substantive concepts of church teaching authority and duty before God.
 
-**Prioritized next check:** test the clarification already present in the prototype. Give the same blind reviewer the prototype's definition of **ever** and **accept** (and only then, if useful, the optional explanatory example) and ask what ambiguity remains, whether its answer changes, and whether the question becomes easier. Do not yet expand the questionnaire, profiles, scoring, or historical parallels. No change to DECISIONS.md.
+**Important limitation:** both passes occurred in the same normal chat, and the prompt deliberately asked for ambiguities and non-binary counterexamples. Do not treat this as spontaneous participant evidence, human validation, or a clean blind AI result.
+
+**Prioritized next check:** repeat the entire two-pass sequence from scratch in one fresh **Temporary Chat** at Medium reasoning. First collect the unclarified response; only then provide the two short definitions and collect the second response. Do not mention the normal-chat result to that tester. Do not yet expand the questionnaire, profiles, scoring, or historical parallels. No change to DECISIONS.md.
