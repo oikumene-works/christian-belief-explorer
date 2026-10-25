@@ -134,3 +134,9 @@ A [separate B2 prototype](../../../prototypes/relevance-routing/yes-no-unsettled
 ## B2 stress test: conscience-binding interpretation
 
 A [separate one-question prototype](../../../prototypes/relevance-routing/conscience-binding-authority.html) now tests whether **any** church teaching authority can impose an obligation before God to accept a scriptural interpretation despite continued personal disagreement. It uses **Yes / No** and a separate **unsettled-view** action, with an optional explanatory example. The existential wording captures one settled-conditional view without making a universal claim, but leaves qualifying conditions unresolved. Local Chromium interaction checks passed; **human comprehension and blind testing have not occurred**. See [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md). All prior B/B2 and private-practice baselines are preserved.
+
+---
+
+## Test battery, case B: a genuine middle position (2026-10-25)
+
+A new [standalone case B prototype](../../../prototypes/relevance-routing/case-b-tradition-presumption.html) probes the independent interpretive weight of long-standing agreement among Christian teachers. It distinguishes **decisive**, **rebuttable starting preference**, and **no independent preference** as three substantive positions; only the rebuttable position gets one narrow Yes/No follow-up about whether individual scriptural study can ever suffice to overturn it. Separate controls preserve both lack of a settled view and a **formed view not represented** by the options. A scripted DOM-logic check passed; real-browser, human-comprehension and blind semantic tests remain outstanding. This is an experiment, not an accepted questionnaire architecture. See [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md); previous prototypes are unchanged.
