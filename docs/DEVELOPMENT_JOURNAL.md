@@ -519,4 +519,4 @@ Test the hypothesis with a very small set of contrasting pilot questions:
 - one question with a real settled conditional/third position requiring a follow-up;
 - one question where multiple considerations may legitimately coexist.
 
-For each, test response coverage, safe inference, cognitive burden, and whether routing remains manageable. Uncertainty stays separate in every case. Use blind semantic stress tests and owner hands-on testing before expansion.
+For each, test response coverage, safe inference, cognitive burden, and whether routing remains manageable. Uncertainty stays separate in every case. The owner should test only their **own genuine response path and interface experience**, not simulate alternative theological positions. Alternative-path coverage should instead use explicit logical stance cases, blind semantic stress tests, and later real respondents from varied backgrounds. Do not treat owner path coverage as representative.
