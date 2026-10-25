@@ -361,6 +361,18 @@ This is a prototype result rather than a new accepted theological classification
 
 ---
 
+## 2026-10-25 — Hands-on feedback: embedded browser and spiritual guidance
+
+The project owner reported that the prototype's Continue button did not respond in the application's built-in browser, although the entire flow worked in an external browser. This is a compatibility observation; the underlying cause has not been determined.
+
+The exercise also revealed a **content gap**: in practical decisions, the player may seek the Holy Spirit's counsel and guidance. The prototype's three questions about what might settle or revise a judgment mention biblical teaching, community authority, and apostolic origin but not spiritual discernment. Their coverage must not be mistaken for a complete account of Christian decision-making.
+
+A possible future question path should distinguish (1) seeking guidance, (2) believing a particular guidance was received, and (3) deciding how to test or weigh it. These may coexist with attention to Scripture, tradition, and community; do not force them into a single-choice contest without justification. This is an observation and design proposal, not a question revision or settled doctrine.
+
+The owner also raised a **project-level possibility** of showing historically documented Christian teachers or thinkers who expressed a similar view on a specific issue, rather than trying to find a single matching tradition. Its scope and evidence standards belong in a separate product-level discussion; no profile model was changed here.
+
+---
+
 ## Current position after this journal entry
 
 The project has not yet settled the final question architecture or scoring method.

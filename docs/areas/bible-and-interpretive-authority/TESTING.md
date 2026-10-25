@@ -18,6 +18,13 @@ All checks passed:
 
 These checks verify the **implemented paths**, not the theological validity or comprehensibility of the wording.
 
+## Initial hands-on feedback from the project owner — 2026-10-25
+
+- **Embedded-browser behavior:** The Continue button did not advance in the application's built-in browser. The same prototype worked throughout in an external browser. This is a reported environment-specific issue, not a diagnosed cause or a confirmed flaw in the question logic. Reproduction and console/security-policy inspection in the affected browser remain open. Using an external browser is a working alternative for now.
+- **Missing consideration:** The owner noted that seeking the Holy Spirit's counsel and guidance in practical decisions is important and absent from the three proposed grounds for reconsideration (biblical teaching, community authority, apostolic origin). These three prompts must not be presented as exhaustive.
+- **Distinction to investigate:** Seeking guidance through prayer, believing the Holy Spirit can guide a judgment, and believing one has received a particular prompting are not identical answers. Neither a reported prompting nor an appeal to Scripture or tradition automatically establishes how that judgment is tested or weighed. The same player may find several of these considerations relevant at once.
+- **Status:** No question wording, transitions, interpretation rules, or accepted project decisions were changed as a result of this feedback. The design of any follow-up about spiritual guidance requires separate review.
+
 ## Human / blind tests needed
 
 1. Before receiving the intended meaning, ask the tester what they understand by *free before God*, *legitimately require*, and *wrong before God*.
