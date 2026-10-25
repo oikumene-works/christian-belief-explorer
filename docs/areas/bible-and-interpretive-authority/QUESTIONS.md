@@ -113,3 +113,15 @@ Yes / No / It depends / Not sure → result.
 ### Further wording tests
 
 Do players understand "came to believe" as a hypothetical belief rather than an actual experience? Do they distinguish a prompting from guidance perceived through Scripture, prayer or trusted Christians? Does "examine whether you had understood it correctly" assume a private sensation or leave enough room for other forms of discernment? These uncertainties require comprehension tests before integration.
+
+---
+
+## Relevance-first parallel entry (B) — 2026-10-25
+
+**Status:** Small routing experiment, not a replacement for either private-practice baseline. [Run the standalone B file](../../../prototypes/relevance-routing/index.html).
+
+**Gate:** “When thinking through a Christian decision, which of these might matter to you? Select any number. This is about relevance, not ranking or agreement.” Selectable considerations: what the Bible says; guidance of the Holy Spirit; conscience; teaching or rules of a Christian community; independent examination of circumstances. An exclusive “I am not sure what would be relevant” option is provided; submitting with none selected is permitted and reported without inferring rejection. The optional “What does this mean? — Example” is *explanatory only* and not the measured scenario.
+
+**Routing:** Every selected consideration leads to one distinct, predetermined follow-up asking a narrower question (possible effect of investigating biblical teaching; seeking guidance; importance of acting against settled conscience; possible effect of community teaching; importance of examining circumstances). Each has Yes / No / It depends / I am not sure. Unselected topics receive no follow-up. No selection or unknown yields a summary immediately. No profile, score, authority ranking or inference from skipped questions.
+
+**Limit:** B's general decision context is *not* the baseline's stipulated private food rule. The B follow-ups probe different things (notably seeking guidance versus possible influence). Thus question counts are comparable as **interface load** only, not as equivalent theological coverage. The gateway can miss unrecognized considerations, and selection may reflect familiarity or salience rather than doctrinal commitment. A “No” follow-up does not mean the same thing as a topic being irrelevant. The conscience prompt may still depend on what “settled conscience” means to a respondent. “Christian community” remains referentially ambiguous. No actual human comprehension finding is claimed.
