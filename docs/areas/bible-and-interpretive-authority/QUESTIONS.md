@@ -143,3 +143,30 @@ To prevent a false inference from a narrow Yes/No answer, B2 tests only actions/
 - circumstances: would independently examine relevant circumstances (not reject outside help).
 
 These are deliberate **changes in measured wording**, not merely new button labels. Conditional answers and unsettled positions must not be silently converted to No. A No means only a negative answer to the particular narrow prompt; no skipped topic is classified as rejected. “Would you” may still hide differences between habitual and hypothetical behavior, and some respondents may have a conditional settled view rather than *no* settled view. These remain targeted test failures to look for before committing to binary responses.
+
+---
+
+## B2 doctrinal-authority stress test — 2026-10-25
+
+**Status:** One-question exploratory probe, not an adopted question or profile. [Standalone HTML](../../../prototypes/relevance-routing/conscience-binding-authority.html). Original [B](../../../prototypes/relevance-routing/index.html), [B2](../../../prototypes/relevance-routing/yes-no-unsettled.html), and both private-practice variants are preserved.
+
+**Intended discriminating distinction:** Can an ecclesial body possess teaching authority which, **in at least one legitimate case**, creates a duty before God to accept its interpretation of Scripture **despite a member's continued sincere disagreement after considering the text**? This is different from regarding church teaching as persuasive evidence, considering advice, complying publicly for order, or accepting an interpretation once personally convinced by biblical arguments.
+
+**Exact measured question:**
+
+> Can a Christian church’s teaching authority ever make it a duty before God for one of its members to accept the church’s interpretation of Scripture, even if that member has carefully considered the biblical text and still disagrees?
+
+**Controls:** substantive **Yes / No**; separate smaller **“I don't have a settled view on this”** action (recorded as `unsettled`, never No). One optional “What does this mean? — Example” is explicitly explanatory, not a particular church or doctrine that the player is asked to judge. The always-visible note defines *ever* as *at least one possible case* and *accept* as something one ought to affirm, not mere outward compliance. This is a self-contained question **without the B2 relevance gate**: the experiment changes the measured content, not the B/B2 baseline files.
+
+### Interpretive limits
+
+- **Yes:** the player considers **some case** of conscience-binding ecclesial interpretation possible despite the member's still-divergent reading. Yes does **not** claim that all churches, pronouncements, or subjects have this force, or identify the conditions.
+- **No:** the player denies **this specific conscience-binding duty grounded in church teaching authority despite continued dissent**. No does **not** deny church guidance, historical testimony, the authority of Scripture, public membership rules, or becoming convinced by the church's biblical reasoning.
+- **Unsettled:** no settled position on this specific possibility; not a No, not a “conditional yes”.
+- **None:** the answer alone determines which church, teaching office, doctrinal act, or condition qualifies; truth of any teaching; actual conformity; relative ultimate norm; whether a person can sincerely will intellectual assent; or a tradition identity.
+
+### Settled-conditional counterexample and proposed repair
+
+A plausible coherent position is: **some properly authorized, formal doctrinal decisions are conscience-binding, but an ordinary local pastor's interpretation or congregational advice is not**. An unqualified “Must you follow the church rather than your own interpretation?” forces this view into a misleading Yes or No. In the new question, **ever** allows a truthful Yes without asserting universal binding force. This solves only the **existence** distinction; it does not measure *which* conditions qualify. Another coherent position gives church teaching serious, perhaps mandatory, **consideration** without requiring **assent** against an unconvinced reading; this corresponds to No on the narrowly defined duty, not to wholesale rejection of church authority.
+
+A split into separate questions about a church's formal competence and the binding effect of a particular decision remains possible **if** blind testing finds the existential question too abstract or insufficiently discriminating. Do not split or add “It depends” automatically. Residual ambiguity about *church*, *authority*, *accept*, and whether a moral duty to assent is intelligible must be tested without priming the respondent.
