@@ -520,3 +520,24 @@ Test the hypothesis with a very small set of contrasting pilot questions:
 - one question where multiple considerations may legitimately coexist.
 
 For each, test response coverage, safe inference, cognitive burden, and whether routing remains manageable. Uncertainty stays separate in every case. The owner should test only their **own genuine response path and interface experience**, not simulate alternative theological positions. Alternative-path coverage should instead use explicit logical stance cases, blind semantic stress tests, and later real respondents from varied backgrounds. Do not treat owner path coverage as representative.
+
+---
+
+## 2026-10-25 — Test battery case B: from forced binary to a substantive rebuttable presumption
+
+Following the HUB working hypothesis of a **minimum sufficient response structure**, the pilot sought a difference genuinely needing at least three settled answer types. It deliberately avoided revisiting the previous conscience-binding issue, where apparent third views had been clarified as assent versus public compliance and were better handled as a binary distinction once terms were fixed.
+
+**Measured axis:** the *independent interpretive standing* of long-standing agreement among Christian teachers on the reading of Scripture, apart from the reasoning offered for that interpretation. Three positions were separated **before authoring UI**:
+- that agreement is independently decisive;
+- that agreement has no independent force beyond arguments;
+- that agreement supplies a real, **defeasible** preference that can be outweighed by stronger reasons.
+
+The middle position is not uncertainty. It grants more than zero standing but less than decisive standing, on the **same interpretive dimension**. A first draft risked conflating a church's office, the long duration of a reading, assent under institutional obligation, and actual biblical evidence. The experiment therefore narrows the question to *agreement among teachers over generations*, without attributing infallible jurisdiction, and keeps the believer's outward conduct out of scope. This correction is provisional; apostolic continuity, denominational scope and formal-doctrine status remain possible unmeasured conditions.
+
+The middle answer alone routes to one narrower question: can independent careful scriptural study ever suffice to defeat that preference without wider agreement? This intentionally separates a **possible individual sufficiency condition** without claiming that Yes or No tells us every factor that governs the respondent's judgment.
+
+The new [case B file](../prototypes/relevance-routing/case-b-tradition-presumption.html) keeps substantive answers separate from “I don't have a settled view”. The test-only diagnostic “My settled view isn't represented” was added as a safety valve rather than forcing a potentially fourth formed view into uncertainty. No generic “It depends” is offered.
+
+**Evidence discipline:** a 17-case check executed the committed JavaScript under a simulated DOM; this is *not* a browser usability check. Explicit logical stance cases include a middle view with sufficiency Yes, a middle view with sufficiency No, and an unrepresented position depending on apostolic status. These are constructed cases, **not** respondent observations. Existing evidence on the role of tradition and scriptural reassessment can be found in the [UMC theological task](https://www.umc.org/en/content/book-of-discipline-105-our-theological-task) and [theological interpretation overview](https://www.thegospelcoalition.org/essay/theological-interpretation-of-scripture/); this is orientation, not adoption of a tradition profile.
+
+**Next:** owner's genuine path only, then blind semantic coverage testing and, later, diverse human participants. If an unrepresented coherent position appears, revisit the measured context rather than automatically adding a fourth answer or expanding a large branch tree. No scores, source profiles or historical-teacher matching. No change to \`DECISIONS.md\`.
