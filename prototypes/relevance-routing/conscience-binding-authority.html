@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conscience-binding teaching | Christian Belief Explorer — B2 stress test</title>
+  <style>
+    :root { font: 16px/1.55 system-ui,sans-serif; color: #233045; background: #f5f7fa; }
+    body { margin: 0; }
+    main { max-width: 43rem; margin: 1.5rem auto; padding: 1rem; }
+    h1 { font-size: 1.85rem; line-height: 1.25; }
+    .panel { background: white; border: 1px solid #d5dce6; border-radius: .8rem; padding: 1.3rem; margin: 1rem 0; }
+    fieldset { border: 0; margin: 0; padding: 0; }
+    legend { font-size: 1.16rem; font-weight: 650; margin-bottom: .85rem; }
+    label { display: flex; gap: .8rem; align-items: center; border: 1px solid #cdd7e3; border-radius: .5rem; padding: .75rem; margin: .5rem 0; cursor: pointer; }
+    input { accent-color: #2857a5; width: 1.1rem; height: 1.1rem; flex: none; }
+    label:has(input:checked) { background: #edf3ff; border-color: #2857a5; }
+    button { font: inherit; padding: .65rem 1rem; border: 1px solid #8190a5; border-radius: .5rem; background: white; color: #233045; cursor: pointer; }
+    .primary { background: #2857a5; color: white; border-color: #2857a5; }
+    .uncertain { border-style: dashed; font-size: .92rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1rem 0; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid #e1a836; outline-offset: 3px; }
+    details { margin: 1rem 0; }
+    summary { cursor: pointer; }
+    .muted { color: #586779; font-size: .94rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="muted">Christian Belief Explorer · Bible and Interpretive Authority · B2 doctrinal stress test</p>
+  <h1>Can church teaching bind conscience?</h1>
+  <p>One question about the possible authority of church teaching when personal biblical interpretation differs. This is not a tradition test.</p>
+  <section class="panel" id="step" tabindex="-1" aria-live="polite"></section>
+  <div class="actions">
+    <button id="back" type="button">Change answer</button>
+    <button id="reset" type="button">Start over</button>
+  </div>
+  <p class="muted">Only predetermined browser logic is used. Answers are not sent or stored. No scores or tradition profiles.</p>
+</main>
+<script>
+'use strict';
+const QUESTION = 'Can a Christian church’s teaching authority ever make it a duty before God for one of its members to accept the church’s interpretation of Scripture, even if that member has carefully considered the biblical text and still disagrees?';
+const RESULT = {
+  yes: 'You believe at least one such case is possible: church teaching authority could create a duty before God to accept an interpretation despite a member’s continuing disagreement.',
+  no: 'You do not believe church teaching authority creates that kind of duty in the described situation. This does not mean you reject church teaching, communal discipline, or the possibility of being persuaded by its biblical arguments.',
+  unsettled: 'You do not have a settled view on whether that kind of conscience-binding authority can exist. This is not a No answer.'
+};
+const step = document.getElementById('step');
+const back = document.getElementById('back');
+let answer = null;
+let showingResult = false;
+function add(tag, text, parent) {
+  const el = document.createElement(tag);
+  if (text) el.textContent = text;
+  parent.appendChild(el);
+  return el;
+}
+function render(focus) {
+  step.replaceChildren();
+  back.disabled = !showingResult;
+  if (showingResult) {
+    add('h2', 'What your answer can mean', step);
+    add('p', RESULT[answer], step).setAttribute('data-testid', 'inference');
+    add('p', 'Not established: which church or teaching qualifies, why its authority would be legitimate, what you would do in practice, whether its interpretation is true, or what you think of Scripture’s authority.', step).className = 'muted';
+    if (answer === 'yes') {
+      add('p', '“Ever” includes positions limited to certain teachings or authorized decisions; your answer does not imply that every church teaching binds conscience.', step).className = 'muted';
+    }
+  } else {
+    const form = add('form', '', step);
+    const fieldset = add('fieldset', '', form);
+    add('legend', QUESTION, fieldset);
+    [['yes', 'Yes'], ['no', 'No']].forEach(function(choice) {
+      const label = add('label', '', fieldset);
+      const input = add('input', '', label);
+      input.type = 'radio';
+      input.name = 'answer';
+      input.value = choice[0];
+      input.checked = answer === choice[0];
+      add('span', choice[1], label);
+    });
+    const details = add('details', '', form);
+    add('summary', 'What does this mean? — Example', details);
+    add('p', 'Imagine an official church interpretation and a member who, after careful study, still understands the Bible passage differently. One position allows that, in some authorized cases, the teaching itself may oblige the member before God to accept it. Another gives the teaching serious weight but denies that its institutional authority alone can impose assent. This example illustrates the distinction; you are not judging any particular church or passage.', details);
+    add('p', '“Ever” means at least one possible case, not every church or every teaching. “Accept” means treating the teaching as something one ought to affirm, not merely following a public rule or considering the argument.', form).className = 'muted';
+    const actions = add('div', '', form);
+    actions.className = 'actions';
+    const continueButton = add('button', 'Continue', actions);
+    continueButton.type = 'submit';
+    continueButton.className = 'primary';
+    continueButton.disabled = answer !== 'yes' && answer !== 'no';
+    fieldset.addEventListener('change', function() { continueButton.disabled = false; });
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selected = fieldset.querySelector('input[name="answer"]:checked');
+      if (!selected) return;
+      answer = selected.value;
+      showingResult = true;
+      render(true);
+    });
+    const unsettled = add('button', "I don't have a settled view on this", actions);
+    unsettled.type = 'button';
+    unsettled.className = 'uncertain';
+    unsettled.addEventListener('click', function() {
+      answer = 'unsettled';
+      showingResult = true;
+      render(true);
+    });
+  }
+  if (focus) step.focus();
+}
+back.addEventListener('click', function() { showingResult = false; render(true); });
+document.getElementById('reset').addEventListener('click', function() { answer = null; showingResult = false; render(true); });
+render(false);
+</script>
+</body>
+</html>
