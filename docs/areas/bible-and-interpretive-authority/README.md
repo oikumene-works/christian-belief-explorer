@@ -116,3 +116,8 @@ Among the major unresolved issues are:
 - [Project README](../../../README.md)
 - [Decisions](../../DECISIONS.md)
 - [Development Journal](../../DEVELOPMENT_JOURNAL.md)
+
+ 
+## Parallel relevance-first entry experiment (2026-10-25)
+
+A separate [relevance-routing prototype](../../../prototypes/relevance-routing/index.html) tests a single unscored multi-select consideration gate followed by one predefined follow-up per selected consideration. It preserves multiple relevant considerations and explicitly limits inference. This is an A/B entry experiment, **not** a replacement of either private-practice baseline or evidence that routing is easier for human respondents. See [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md) for the design and initial walkthrough matrix.
