@@ -88,3 +88,28 @@ Checks passed:
 ### Next empirical check
 
 Ask 3–5 people to try A and B in counterbalanced order. For each, collect questions reached, perceived difficulty, their explanation of “relevant,” and whether the generated summary reflects their meaning. Specifically challenge a Bible+Spirit+community combination and an unselected-yet-important consideration. Test B with an external browser and separately the in-app embedded browser; the old Continue defect is unresolved. Revise wording/routing **after** observation, without expanding this into the entire area.
+
+---
+
+
+## B2 — binary follow-ups with separate unsettled action (2026-10-25)
+
+**Baseline preserved:** `prototypes/relevance-routing/index.html`. **New file:** `prototypes/relevance-routing/yes-no-unsettled.html`. The two private-practice baselines also remain unchanged.
+
+**Evidence:** The project owner's hands-on B feedback is that having “It depends” and “I am not sure” alongside ordinary substantive choices felt undesirable. This is direct feedback about B, **not** human evidence that B2 is easier.
+
+**Static implementation checks passed at creation:** two substantive options are present, “It depends” removed from the B2 follow-up control, separate `unsettled` action exists, form submission requires an explicitly selected Yes/No, and the multi-select gate remains. No request or storage calls appear in the HTML source. **No automated real-browser or human B2 interaction test has yet been performed.** These checks do not establish browser compatibility or experiential ease.
+
+### Predicted paths and interpretation stress tests (not observed users)
+
+1. Bible only → gate + 1 Yes/No or unsettled follow-up → summary. A No denies the specific intention to examine an available passage, **not** Scripture's authority.
+2. Bible + Spirit + community → three independent follow-ups. All may be Yes without being ranked or placed in opposition. A Spirit No does not deny the Spirit's guidance in general.
+3. Community Yes + conscience No → these narrowly worded answers can coexist; cannot establish legitimate community requirements or conscience-binding force.
+4. Conscience unsettled → explicit unsettled summary, never mapped to No.
+5. All five selected → six steps, just as in B; fewer visible radio alternatives is **not** fewer questions.
+6. No items/unknown gate → qualified summary, no assumption that omitted considerations are rejected.
+7. A respondent whose honest answer is “sometimes, under particular conditions” may find **both** Yes/No and “no settled view” inaccurate. This is a *conditional settled position*, not uncertainty. B2 currently has no dedicated representation; do not reinterpret such an answer.
+
+**Assessment:** A lighter-looking interface is mechanically plausible but remains **untested** for comprehension and effort. The narrower formulations reduce overclaiming but also measure something different from some B questions. In particular, asking whether someone would *consider* community advice cannot answer whether they would *obey* a binding teaching. For conditional answers, first test whether an explicit circumstance can narrow the question; if not, split a specific dimension rather than forcing binary choice.
+
+**Next step:** have the owner try B and B2 on the same selections, paying particular attention to an honestly conditional answer and the perceived meaning of the separate unsettled button. Record exact question and missing condition. Test Back/edit/reset and mobile/embedded-browser behavior before claiming operational parity.
