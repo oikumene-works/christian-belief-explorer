@@ -159,3 +159,18 @@ The conditional-settled-view problem remains open: a genuine “it depends on a 
 **Implementation tested:** the new file's Yes / No / separate `unsettled` paths, answer editing, resetting, expandable illustrative example, and 320/390/768 px displays passed a scripted Chromium/Playwright check; no page errors or external requests were observed. The GitHub blob matches the locally tested file bytes (SHA `18893b1a934e4c9f8341f1ffa27b8feab579dfbb`). This verifies code behavior only; **no human comprehension test, independent theological review, or embedded-browser compatibility check** has been carried out.
 
 **Current next step:** owner tries this single question as a participant; if promising, run a **blind question/inference review in an independent Temporary Chat** before altering or extending the area. Specifically test whether *church*, *legitimate teaching authority*, *accept*, and *duty before God* are understood as intended and whether an authentic settled conditional stance still lacks an honest answer. Do **not** expand to scores, profiles, historical parallels, or whole-area question design at this stage. Original B, B2, and both private-practice prototypes remain unchanged; `DECISIONS.md` unchanged.
+
+
+---
+
+## L. First blind review of the B2 doctrinal-authority question — 2026-10-25
+
+A fresh Temporary Chat at **Medium** reasoning received only the exact conscience-binding authority question and Yes / No / unsettled choices, with no project context or explanatory text. This was an AI semantic blind review, not a human comprehension test.
+
+**Result:** the reviewer substantially recovered the intended distinction and treated **Yes / No** as meaningful opposing positions under one natural reading. Its principal ambiguity was **accept**: genuine assent versus practical submission/compliance. It produced a coherent settled position that submits to church decisions without internally affirming the interpretation; it then noted that this becomes **No**, rather than a third doctrinal answer, if *accept* is explicitly restricted to assent. It rated the question 3/5 in difficulty.
+
+The reviewer also distinguished church authority as an independent ground from a teaching binding because it is actually true or scripturally correct. Its stated limits on what No implies were close to the prototype's intended inference limits.
+
+**Important limitation:** the blind prompt deliberately asked for ambiguities and settled non-binary counterexamples, and the tester was an AI model. Do not treat this as spontaneous participant evidence or human validation.
+
+**Prioritized next check:** test the clarification already present in the prototype. Give the same blind reviewer the prototype's definition of **ever** and **accept** (and only then, if useful, the optional explanatory example) and ask what ambiguity remains, whether its answer changes, and whether the question becomes easier. Do not yet expand the questionnaire, profiles, scoring, or historical parallels. No change to DECISIONS.md.
