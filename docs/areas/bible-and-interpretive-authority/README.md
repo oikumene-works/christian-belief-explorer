@@ -128,3 +128,9 @@ A separate [relevance-routing prototype](../../../prototypes/relevance-routing/i
 ## B2: two positions and a separate unsettled-view control
 
 A [separate B2 prototype](../../../prototypes/relevance-routing/yes-no-unsettled.html) tests **Yes/No** as the two substantive follow-up choices, with a separate action for having no settled view. It keeps multi-select relevance routing while narrowing follow-up wording. [The original B](../../../prototypes/relevance-routing/index.html) and both private-practice variants are unchanged. This experiment does not settle how a *definite conditional* position should be recorded. Details and interpretation limits are in [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md).
+
+---
+
+## B2 stress test: conscience-binding interpretation
+
+A [separate one-question prototype](../../../prototypes/relevance-routing/conscience-binding-authority.html) now tests whether **any** church teaching authority can impose an obligation before God to accept a scriptural interpretation despite continued personal disagreement. It uses **Yes / No** and a separate **unsettled-view** action, with an optional explanatory example. The existential wording captures one settled-conditional view without making a universal claim, but leaves qualifying conditions unresolved. Local Chromium interaction checks passed; **human comprehension and blind testing have not occurred**. See [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md). All prior B/B2 and private-practice baselines are preserved.
