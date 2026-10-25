@@ -83,7 +83,11 @@ These must not be treated as the same position.
 
 A narrow [private-practice prototype](../../../prototypes/private-practice/index.html) now explores a fictional dietary rule that nobody can observe or check. Download its standalone HTML file and open it in a browser. It uses predefined questions and browser-only logic; no AI, score, tradition comparison, or external service is involved.
 
-This is an experiment, not an accepted questionnaire. The scenario and its inferences are specified in [QUESTIONS.md](QUESTIONS.md); test checks and known gaps are in [TESTING.md](TESTING.md).
+This remains a baseline experiment, not an accepted questionnaire.
+
+A second [spiritual-guidance experiment](../../../prototypes/private-practice/spiritual-guidance.html) retains the same private-practice scenario and core distinctions, then tests three short questions about seeking the Holy Spirit's guidance, the possible weight of a believed guidance, and examining one's understanding of it. The original prototype remains unchanged for comparison. This second experiment temporarily leaves aside the original three questions about biblical, communal, and apostolic grounds; it does not replace or rank them.
+
+Both experiments are documented in [QUESTIONS.md](QUESTIONS.md), with behavior checks and unresolved questions in [TESTING.md](TESTING.md). Neither is a final questionnaire or an accepted tradition-profile model.
 
 ## Pilot documentation
 

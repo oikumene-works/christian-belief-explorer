@@ -38,3 +38,22 @@ These checks verify the **implemented paths**, not the theological validity or c
 ## Constraints on interpreting test results
 
 No real tradition profile or scripture interpretation has been validated against this prototype. The resulting text reports only the player's selected judgments. **Do not** assign a denomination or calculate a compatibility percentage from these responses.
+
+---
+
+## Focused spiritual-guidance experiment: browser checks — 2026-10-25
+
+The separate `spiritual-guidance.html` file was exercised in headless Chromium with Playwright at a narrow 390px viewport. The testing environment blocked direct `file://` navigation with an administrator restriction, so the **same HTML bytes** were loaded into the test page using Playwright's `set_content` instead. This confirms browser-script and interaction behavior under that method, **not** file URL behavior or compatibility with the application's internal browser.
+
+Checks passed:
+
+- `freedom=no` → guidance questions, while omitting authority/conscience inferences;
+- `freedom=yes`, `authority=yes`, `conscience=no` → distinct judgments retained;
+- seeking guidance = No, hypothetical weight = Yes → answers coexist without an invented contradiction;
+- seeking guidance = Yes, hypothetical weight = No → evaluation question skipped, without claiming the player rejects the Holy Spirit;
+- `authority=no`, `conscience=yes` → unresolved combination flagged, not categorized as impossible;
+- uncertain answers for freedom, seeking, weight and examination remain uncertain;
+- Back, change an earlier answer, forward navigation and reset → later answers are cleared appropriately;
+- no JavaScript page errors, external network requests or horizontal overflow in the tested session.
+
+**Still open:** actual compatibility with the application's built-in browser, blind human testing, and whether the conditional examination question is semantically clear. No theological truth claims or source-level profile comparisons were validated.

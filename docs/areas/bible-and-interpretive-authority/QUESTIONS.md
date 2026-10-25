@@ -66,3 +66,50 @@ All transitions and summaries are fixed in the browser file. No free-text interp
 The identity and ecclesial standing of the community; an explicit personal vow; whether the player would comply in fact; what exactly makes an obligation legitimate; the role of indirect biblical arguments; confidence; openness to alternatives; named tradition profiles; compatibility or weighting. The branch cannot be generalized to every Christian community or tradition.
 
 **Next design check:** Have a person explain each question and the resulting summary in their own words before revising wording or broadening the scenario.
+
+---
+
+## Focused spiritual-guidance experiment (2026-10-25)
+
+**Status:** A separate experimental branch of the same private-practice scenario. It does not replace the first prototype, change the profile model, or alter scoring.
+
+**Runnable file:** [`prototypes/private-practice/spiritual-guidance.html`](../../../prototypes/private-practice/spiritual-guidance.html).
+
+The first three question texts (freedom, community authority, conscience) are unchanged. Their routing differs:
+
+- `freedom=yes` → authority → conscience → `spirit_seek`.
+- `freedom=no` or `freedom=unsure` → `spirit_seek`, without inferences about authority or conscience.
+- A judgment about freedom is therefore **not** a prerequisite for discussing spiritual guidance.
+
+**SG1 — Seeking guidance** (`spirit_seek`)
+
+> Would you seek the Holy Spirit's guidance in deciding how to respond to this rule?
+
+Yes / No / Not sure → `spirit_weight`.
+
+**SG2 — Possible weight of perceived guidance** (`spirit_weight`)
+
+> Suppose you came to believe the Holy Spirit was guiding you toward a particular choice here. Would that affect your judgment about what to do?
+
+Yes / No / It depends / Not sure. No → result; others → `spirit_check`. The scenario is hypothetical, not a claim of having actually received guidance.
+
+**SG3 — Examining one's understanding** (`spirit_check`)
+
+> If you were to rely on that sense of guidance, would you first examine whether you had understood it correctly?
+
+Yes / No / It depends / Not sure → result.
+
+### Interpretation boundaries
+
+- Seeking guidance does not imply a claim to have received identifiable guidance or to have a direct inner prompting.
+- Not seeking guidance in this specific scenario does not imply denying the Holy Spirit's existence, activity, or guidance through Scripture and other people.
+- A hypothetical judgment that perceived guidance would matter does not imply that any impression is divine, reliable, or decisive.
+- An answer about whether a person would examine their understanding does not specify the **method** or grounds for that examination. This remains open.
+- `spirit_seek=no` with `spirit_weight=yes` can be coherent: a player might consider guidance that was not sought. `spirit_seek=yes` with `spirit_weight=no` can also be coherent: seeking guidance does not entail granting a particular impression independent force.
+- "It depends" and "Not sure" are kept distinct and produce qualified summaries.
+- Biblical teaching, prayer, community counsel, and tradition may contribute together. The new questions are **not** presented as a fourth source competing with Scripture, community or apostolic testimony.
+- The original prototype's three *grounds for reconsidering* questions are not repeated in this focused test. Its result is therefore deliberately narrower, not a replacement for a complete authority account.
+
+### Further wording tests
+
+Do players understand "came to believe" as a hypothetical belief rather than an actual experience? Do they distinguish a prompting from guidance perceived through Scripture, prayer or trusted Christians? Does "examine whether you had understood it correctly" assume a private sensation or leave enough room for other forms of discernment? These uncertainties require comprehension tests before integration.

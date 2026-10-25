@@ -54,7 +54,8 @@ The pilot is still in an early design and prototyping phase.
 See:
 
 - [Pilot area overview](docs/areas/bible-and-interpretive-authority/README.md)
-- [Try the private-practice prototype (download and open the HTML file locally)](prototypes/private-practice/index.html)
+- [Original private-practice prototype (download and open locally)](prototypes/private-practice/index.html)
+- [Focused spiritual-guidance experiment (download and open locally)](prototypes/private-practice/spiritual-guidance.html)
 - [Project decisions](docs/DECISIONS.md)
 - [Development journal](docs/DEVELOPMENT_JOURNAL.md)
 

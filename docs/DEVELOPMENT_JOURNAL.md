@@ -373,6 +373,34 @@ The owner also raised a **project-level possibility** of showing historically do
 
 ---
 
+
+## 2026-10-25 — A separate experiment isolates spiritual discernment
+
+The pilot now has a second runnable HTML variant, `prototypes/private-practice/spiritual-guidance.html`. The original private-practice path is preserved as a baseline. The new variant keeps the initial freedom, community authority and conscience question texts but asks three distinct follow-ups about (1) seeking the Holy Spirit's guidance, (2) the hypothetical significance of believing guidance had been received, and (3) examining one's understanding before relying on it.
+
+The new path does not treat the Spirit as an alternative in an exclusive contest against Scripture or tradition. Nor does a hypothetical question claim that the player has actually received an impression. When freedom is denied or uncertain, it still asks about guidance but avoids inference about community authority. The old questions about possible biblical, community and apostolic grounds were left in the baseline rather than combined with this narrowly scoped experiment.
+
+### What was tested and what was not
+
+A headless Chromium / Playwright script passed branching, contradictory-looking but potentially coherent combinations, summary, editing, reset and mobile-width checks. The test environment prevented file URL navigation, so the exact HTML bytes were injected into a page. This does not reproduce or resolve the previously reported in-app Continue-button failure.
+
+Human comprehension testing, the ways a player examines perceived guidance, and the role of guidance via Scripture, prayer and others remain unresolved. See `QUESTIONS.md` and `TESTING.md`.
+
+---
+
+## 2026-10-25 — HUB handoff: historical parallels remain a deferred hypothesis
+
+The HUB discussion did **not** adopt a project decision about including historical Christian teachers or thinkers in player results. The working hypothesis is to retain tradition profiles as a distinct comparison method, while a possible historical parallel would:
+
+- concern one **specific documented view**, not the teacher's theology as a whole;
+- identify a named source and explain the exact scope and limitations of the comparison;
+- not turn historical people into ordinary scored profiles;
+- not produce a score or a "closest teacher" ranking.
+
+Once the pilot has its first sufficiently developed real result, a **manual trial with approximately two or three sourced historical parallels** may assess whether they improve understanding and whether the limits are clear. Until then, this is deferred. No profile or scoring structures are changed.
+
+---
+
 ## Current position after this journal entry
 
 The project has not yet settled the final question architecture or scoring method.
@@ -389,4 +417,4 @@ The most promising design direction currently combines:
 - blind testing of question wording and inference rules;
 - small working prototypes before larger implementation commitments.
 
-The narrow pilot path and its smoke-test record are now in `docs/areas/bible-and-interpretive-authority/QUESTIONS.md` and `TESTING.md`. The proposed terms, source-based profiles, and scoring method remain open; experimental files are not accepted decisions.
+The original private-practice prototype and the separate spiritual-guidance experiment are documented in `docs/areas/bible-and-interpretive-authority/QUESTIONS.md` and `TESTING.md`. The proposed terms, source-based profiles, scoring method and historical parallels remain open; experimental files are not accepted decisions.
