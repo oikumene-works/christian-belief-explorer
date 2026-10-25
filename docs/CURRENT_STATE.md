@@ -95,7 +95,7 @@ Current hypothesis:
 - How should a first **real**, source-based area result be validated before trying historical parallels?
 - Why does Continue fail in the app's embedded browser?
 
-## F. One prioritized next experiment
+## F. Earlier prioritized next experiment (historical handoff plan)
 
 Create **one small, side-by-side entry-question test**, without rewriting the entire area:
 
@@ -145,3 +145,17 @@ The owner tried B and reported disliking “It depends” and “I am not sure�
 The owner tried the [B2 Yes/No + separate unsettled-view prototype](../prototypes/relevance-routing/yes-no-unsettled.html), without covering all answer paths, and reported that this **feels like a better way to ask questions** than the previous B-style alternatives shown together. Treat this as a **positive but limited first-person usability impression**, not as evidence that every path works or that Yes/No is valid for all theological questions.
 
 The conditional-settled-view problem remains open: a genuine “it depends on a specific condition” position must not be forced into Yes, No, or “I don't have a settled view.” No architecture decision has been accepted and no prototype has been replaced. The owner is moving discussion to HUB. Suggested HUB focus: assess whether the B2 presentation pattern merits a further narrowly targeted test, while retaining B and the two private-practice variants as baselines. [Area TESTING.md](areas/bible-and-interpretive-authority/TESTING.md) records the first-hand observation and test limitations. `DECISIONS.md` unchanged.
+
+---
+
+## K. One-question B2 stress test: conscience-binding church teaching — 2026-10-25
+
+**Status:** New *experimental question and small working HTML*, not an adopted questionnaire or accepted project decision. The owner asked the pilot to test the B2 Yes/No + separate unsettled-view interface against a genuinely discriminating **Bible and Interpretive Authority** issue. [Standalone one-question prototype](../prototypes/relevance-routing/conscience-binding-authority.html); question logic and inference limits in [area QUESTIONS.md](areas/bible-and-interpretive-authority/QUESTIONS.md); test evidence in [area TESTING.md](areas/bible-and-interpretive-authority/TESTING.md); design correction in [DEVELOPMENT_JOURNAL.md](DEVELOPMENT_JOURNAL.md).
+
+**Measured distinction:** Whether the *recognized teaching authority of a Christian church* could **ever** generate a duty before God for a member to accept the church's interpretation of Scripture **even while the member has examined the text and sincerely continues to disagree**. It is explicitly about religiously obligatory assent, **not** public conformity, mere advice, or being persuaded by the church's textual arguments.
+
+**Stress-test finding (conceptual, not yet human tested):** “Must the church's interpretation override my own?” fails for a settled **conditional** view (binding only for appropriately authorized decisions, not every sermon or local rule). Narrowing the quantifier to **ever / at least one possible case**, and the obligation to **assent**, allows that view to answer Yes without claiming universal authority. A No denies only this specific form of binding force, not other church authority. This **preserves a real, if coarse, discriminating difference**; it does **not** reveal which acts or conditions qualify. A split question was considered but deferred, not ruled out. Further conditional positions may still escape the format in human testing.
+
+**Implementation tested:** the new file's Yes / No / separate `unsettled` paths, answer editing, resetting, expandable illustrative example, and 320/390/768 px displays passed a scripted Chromium/Playwright check; no page errors or external requests were observed. The GitHub blob matches the locally tested file bytes (SHA `18893b1a934e4c9f8341f1ffa27b8feab579dfbb`). This verifies code behavior only; **no human comprehension test, independent theological review, or embedded-browser compatibility check** has been carried out.
+
+**Current next step:** owner tries this single question as a participant; if promising, run a **blind question/inference review in an independent Temporary Chat** before altering or extending the area. Specifically test whether *church*, *legitimate teaching authority*, *accept*, and *duty before God* are understood as intended and whether an authentic settled conditional stance still lacks an honest answer. Do **not** expand to scores, profiles, historical parallels, or whole-area question design at this stage. Original B, B2, and both private-practice prototypes remain unchanged; `DECISIONS.md` unchanged.
