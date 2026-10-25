@@ -117,3 +117,12 @@ The purpose is to learn whether this entry structure reduces ambiguity and unnec
 - **At handoff:** mention the updated file(s), branch/commit and status labels. The other thread then reads the latest repository state rather than reconstructing it from conversational memory.
 
 This protocol requires explicit repository updates: it is **not** automatic synchronization between ChatGPT conversations.
+
+ 
+## H. Progress on prioritized A/B entry experiment — 2026-10-25
+
+A **third, separate** runnable file was added at [prototypes/relevance-routing/index.html](../prototypes/relevance-routing/index.html). It contains an unscored multi-select relevance gate (Bible, Holy Spirit, conscience, Christian community, independent examination), an explicit uncertainty option, an optional **explanatory** example and one short predefined follow-up for each selected consideration. None of these considerations is ranked or treated as exhaustive. No AI, profiles, scoring or historical parallels were introduced; both existing private-practice HTML baselines are unchanged.
+
+A small comparative **desk walkthrough** is recorded in [TESTING.md](areas/bible-and-interpretive-authority/TESTING.md). B uses two questions for a single selected consideration, four for three, six for five, and one if no selection or uncertainty; A's original private-practice path uses one when freedom is No/uncertain and six when freedom is Yes. **These are not equivalent-coverage comparisons**: B does not test the baseline's concrete community rule, private obligation or freedom distinction. No participant usability result or actual embedded-browser compatibility test has yet been established.
+
+**Key observation:** a relevance gate can avoid asking about unselected topics while allowing Bible, Spirit and conscience to coexist, but a relevance selection is not a doctrinal answer; omission is not rejection. The gate may itself hide assumptions about completeness, salience and the referent of community. **Prioritized next step:** short counterbalanced human comprehension tests of A versus B; first fix observable ambiguity, then consider any expansion. This is a provisional result, **not an accepted architecture** and makes no change to [DECISIONS.md](DECISIONS.md).
