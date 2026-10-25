@@ -191,3 +191,24 @@ The conscience-binding question was retested from scratch in a fresh **Temporary
 **Blind-test method going forward:** use AI blind tests primarily to inspect wording, hidden assumptions, answer coverage, and inference limits. If a substantive simulated answer is wanted, define the persona explicitly rather than asking the model to invent “an ordinary Christian”. Human comprehension testing remains necessary.
 
 **Next project question:** decide whether the current question should now be tested with the optional explanatory example, tested with a real human respondent, or subjected first to a separate high-reasoning adversarial binary-coverage review. No change to DECISIONS.md.
+
+
+---
+
+## N. New working hypothesis: minimum sufficient response structure — 2026-10-25
+
+The owner identified a design bias in the recent B2 work: the project was beginning to reshape theological distinctions to preserve the preferred **Yes / No** interface. The project is therefore moving to a broader **working hypothesis**, not an accepted architecture:
+
+> Use the smallest response structure that faithfully represents the coherent settled positions relevant to the measured distinction.
+
+Operationally:
+
+- **Yes / No** is preferred when the distinction is genuinely binary.
+- A genuine **settled conditional or third position** must not be forced into Yes, No, or unsettled; represent it explicitly and route to narrower clarification questions.
+- **Unsettled / no formed view** remains separate from substantive positions.
+- If multiple considerations can coexist, a non-exclusive structure may be more faithful than binary opposition.
+- Before adding a generic “It depends”, determine whether the real problem is ambiguous wording, mixed dimensions, missing context, or a genuine conditional position.
+
+**Next experiment:** create a small response-architecture stress test inside the Bible and Interpretive Authority pilot using three contrasting cases: one genuinely binary distinction, one genuine conditional/third-position case with follow-up routing, and one coexistence/multi-select case. Evaluate response coverage, inference limits, cognitive burden, and routing complexity. Do not add scoring or profiles merely for this experiment.
+
+No change to DECISIONS.md.
