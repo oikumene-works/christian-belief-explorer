@@ -57,3 +57,34 @@ Checks passed:
 - no JavaScript page errors, external network requests or horizontal overflow in the tested session.
 
 **Still open:** actual compatibility with the application's built-in browser, blind human testing, and whether the conditional examination question is semantically clear. No theological truth claims or source-level profile comparisons were validated.
+
+---
+
+## Parallel A/B entry experiment — 2026-10-25
+
+**Prototype B:** [relevance-routing/index.html](../../../prototypes/relevance-routing/index.html). Existing A baseline files were not edited.
+
+### Desk walkthrough matrix (predicted code paths, not user trials)
+
+| Input / interpretation | A: original private-practice | B: relevance-first |
+| --- | --- | --- |
+| Act not otherwise permitted (freedom=No) | 1 question then stop; no authority inference | 1 gate + 0–5 follow-ups, depending on selection; B does **not** test intrinsic freedom |
+| Only Bible marked relevant | A reaches six questions only if freedom=Yes | B: 1 gate + 1 follow-up = 2 |
+| Bible + Holy Spirit + conscience marked relevant | A original: six questions if freedom=Yes, but does not test seeking guidance | B: 1 + 3 = 4 |
+| All five marked relevant | A original: six questions if freedom=Yes | B: 1 + 5 = 6; no reduction |
+| Not sure about relevance / no topic selected | A has no directly equivalent gate | B: 1 gate and qualified summary; no rejected-topic inference |
+| Community relevant, then No on its follow-up | A asks about a *particular private requirement* | B records only No on possible influence of community teaching; does not imply community authority is illegitimate |
+
+**Important:** These are code-path / interpretive walkthroughs, **not empirical confirmation** that B saves time, is clearer, or covers the same theology. The A spiritual-guidance variant has a different route (up to six questions). No direct comparison of comprehension is yet available.
+
+### Hypotheses and preliminary findings
+
+1. **Redundant prompts:** B skips unselected follow-ups by construction, but it may create a *new* gate burden. B can be shorter (2 versus 6 on a selective path) or equally long (6 versus 6); A is shorter in its freedom=No early-exit path. These counts are not matched-content outcomes.
+2. **Comprehension:** untested with people. B avoids an immediate hypothetical food case but “relevant” may be more abstract and less informative than the concrete A scenario.
+3. **Hidden assumptions:** the five topics risk looking exhaustive; unknown and empty selection mean different things; the selection may measure salience/familiarity rather than meaningful relevance; “community” and “conscience” are underspecified.
+4. **Coexistence:** multiple considerations can be selected simultaneously, including Bible and Spirit, without a hierarchy. This proves UI expressibility, not theological interpretation quality.
+5. **Inference:** only topic selection and answers to the precisely worded follow-ups are reportable. No rejection from omission, superiority of one source, received guidance, actual conduct, binding community authority, or wrong-before-God judgment follows.
+
+### Next empirical check
+
+Ask 3–5 people to try A and B in counterbalanced order. For each, collect questions reached, perceived difficulty, their explanation of “relevant,” and whether the generated summary reflects their meaning. Specifically challenge a Bible+Spirit+community combination and an unselected-yet-important consideration. Test B with an external browser and separately the in-app embedded browser; the old Continue defect is unresolved. Revise wording/routing **after** observation, without expanding this into the entire area.
