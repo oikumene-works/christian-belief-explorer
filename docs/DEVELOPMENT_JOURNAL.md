@@ -462,3 +462,23 @@ This was useful because the prototype already attempts to draw exactly that boun
 The review also surfaced a second conceptual boundary: a person may think a church teaching binds when it is genuinely true or scriptural, while denying that **institutional authority itself** creates the duty during continuing disagreement. This remains compatible with No on the current narrow formulation.
 
 The test is neither human evidence nor a clean blind AI result and does not justify adopting Yes/No as a general questionnaire rule. Repeat the two-pass test from scratch in a fresh Temporary Chat before relying on the finding. It remains a useful semantic pretest in the project's prototype → observation → correction loop.
+
+
+---
+
+## 2026-10-25 — Temporary Chat replication confirms the wording effect but exposes persona bias
+
+The two-pass conscience-binding question test was repeated correctly in a fresh Temporary Chat at Medium reasoning with personalization disabled.
+
+The semantic result replicated the earlier normal-chat pretest closely. Before clarification, **accept** could be read as either inward assent or practical submission, producing an apparent settled third position. After the short definitions of **ever** and **accept**, practical submission without assent fell clearly under **No**, no equally clear third doctrinal position remained, and the reviewer's difficulty rating again dropped from **3/5 to 2/5**.
+
+This makes the local wording result more credible: in this question, the binary distinction appears to work better once *accept* is explicitly restricted to assent rather than compliance.
+
+The clean replication also revealed a new methodological problem. Asked to act as an ordinary Christian respondent, the model immediately invented a particular theological baseline: Scripture as the foundation of faith, appreciation of church teaching and tradition, and strong personal responsibility before God. That profile is not representative of all Christian traditions and may bias both the selected answer and the interpretation of authority.
+
+Future AI blind tests should therefore distinguish two tasks:
+
+1. **semantic stress testing** — what does the wording permit, exclude, or leave ambiguous?
+2. **substantive simulated answering** — which requires an explicitly defined persona if used at all.
+
+Do not treat an unconstrained model's self-selected Christian persona as a neutral human-Christian baseline. The project still needs human comprehension testing.
