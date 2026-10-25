@@ -442,3 +442,23 @@ An initial natural formulation — whether church interpretation should bind a b
 The resulting [single-question prototype](../prototypes/relevance-routing/conscience-binding-authority.html) asks if ecclesial teaching authority can **ever** impose that narrower duty even while an informed member continues to disagree. This repairs the categorical Yes/No failure for a limited-authority position (Yes means *at least one case*), but loses information about which conditions govern that case. No concerns only this duty, not all ecclesial influence.
 
 A browser-script check passed for Yes, No, unsettled, editing/reset, and narrow layouts. Theological interpretation is still a **desk hypothesis**, not a blind human finding. This is a specific example of the loop **small prototype → predicted edge case → narrowed wording → test before expansion**. Keep the earlier variants intact, and use a separate Temporary Chat for the next blind question analysis if the owner wants to proceed. No accepted project decision was made.
+
+
+---
+
+## 2026-10-25 — Blind review isolates assent versus compliance as the main wording risk
+
+The one-question conscience-binding authority prototype was subjected to a context-isolated Temporary Chat review at Medium reasoning. The reviewer saw only the question and Yes / No / unsettled choices; it was not told the project's purpose, intended inference, explanatory text, or comparison model.
+
+The review largely reconstructed the intended issue, including the importance of **ever** as an existential rather than universal claim. Its main difficulty was the word **accept**. It independently distinguished between:
+
+- a duty to **assent** to the church's interpretation as something one ought to affirm; and
+- a duty to **submit or comply** in practice while remaining internally unconvinced.
+
+That distinction generated an apparently third settled position only while *accept* remained ambiguous. Under the intended assent reading, the reviewer itself recognized that practical submission without assent can still answer **No** to the narrow question.
+
+This is useful because the prototype already attempts to draw exactly that boundary in its explanatory text. The next experiment should therefore test the clarification rather than immediately redesign the binary structure: does defining *accept* as assent, not mere compliance, make the question easier and preserve the intended distinction?
+
+The review also surfaced a second conceptual boundary: a person may think a church teaching binds when it is genuinely true or scriptural, while denying that **institutional authority itself** creates the duty during continuing disagreement. This remains compatible with No on the current narrow formulation.
+
+The test is not human evidence and does not justify adopting Yes/No as a general questionnaire rule. It is a semantic stress-test result in the project's prototype → observation → correction loop.
