@@ -235,3 +235,43 @@ Therefore:
 The Temporary Chat replication strengthens the specific wording finding: the **accept = assent, not compliance** clarification repeatedly removes the main apparent third-position problem in this test. It does **not** validate the question with humans, establish a neutral Christian respondent model, or justify a general binary-question architecture.
 
 No accepted decision follows.
+
+---
+
+## Test battery — Case B: three settled positions and one conditional follow-up (2026-10-25)
+
+**File:** [case-b-tradition-presumption.html](../../../prototypes/relevance-routing/case-b-tradition-presumption.html).
+**Status:** working, scripted logic test passed; **no** human or independent blind semantic test.
+
+### Explicit stance-case matrix — conceptual, not simulated owner answers
+
+| Formed stance | Route | Safe reading |
+| --- | --- | --- |
+| Intergenerational agreement by itself settles the reading | \`decisive\` | Independent decisive weight in this narrow comparison |
+| Agreement counts as evidence and can be outweighed by individual biblical study | \`rebuttable → yes\` | Revisable preference; such personal study may sometimes suffice |
+| Agreement gives a real preference, but individual study alone never suffices to displace it | \`rebuttable → no\` | Revisable preference, additional condition unknown |
+| Agreement adds no independent interpretive preference; examine the teachers' arguments | \`none\` | No independent weight from agreement itself |
+| Explicitly undecided about the significance of such agreement | \`unsettled\` | No formed view, **not** a negative stance |
+| Firmly conditional on *apostolic authenticity* or a specific formal decision, rather than duration or agreement alone | \`unrepresented\` if none fits | **Design gap**, never an uncertain or negative answer |
+
+**Stress-test judgments:**
+
+1. **Uncovered formed position:** yes, one is plausible when a respondent needs facts about apostolic authenticity, scale of consensus, or formally asserted authority. The diagnostic route prevents forced selection but does not characterize that position. Completeness is **not established**.
+2. **Multiple fit:** the wording attempts to make decisive / defeasible / zero *independent interpretive weight* exclusive. However a player who applies different principles to different biblical topics may still identify with more than one at the general level; the context may require more specification. Do not classify such a player without further testing.
+3. **Substantive third:** \`rebuttable\` supplies a positive but defeasible reason. It is neither decisiveness nor zero independent weight, so it is not an “It depends” substitute for poor grammar.
+4. **Unsettled misuse:** separate \`unsettled\` and \`unrepresented\` states at both stages; neither is forced into \`none\` or \`no\`.
+5. **Follow-up precision:** \`rebuttable → yes/no\` addresses whether one *particular* condition—independently supported personal biblical study—can ever suffice. It intentionally does not assert a complete list of defeating conditions.
+6. **Inference:** all result texts report only the selected kind/strength of interpretive weight and the single sufficiency condition; they avoid denomination, binding church power, particular interpretation, and truth claims.
+7. **Theological discrimination:** still meaningful as a normative interpretive difference, but this is a **coarse** three-level model. It cannot prove that the same three levels fit every context.
+
+**Possible hidden dimension to watch:** “many Christian teachers across generations” can mean merely numerical agreement, continuous reception, or apostolic succession. Q1 asks only about agreement across generations; actual users may import a different status claim. It must not be silently reinterpreted as binding magisterial authority.
+
+### Actual automated checks
+
+Executed the **exact committed JavaScript** with a minimal simulated DOM harness in a JavaScript runtime (not a graphical browser). Script compiled. **17 checks passed** covering: all three main radio choices; refusal to submit without a choice; distinct \`decisive\` and \`none\` inferences; both first-question escape controls; binary follow-up; two distinct qualified results; both follow-up escape controls; Back from result to follow-up and from follow-up to main; no stale follow-up inference after changing the main answer; reset; no network/storage APIs in the source. Fetched \`main\` content blob SHA at testing: \`8ddcef97770e35241c3f5bca6551cbad8e2471c6\`.
+
+**Not tested:** real Chromium display, keyboard/screen-reader semantics, embedded-browser compatibility, live user comprehension, cross-Christian completeness, and external blind semantic critique. The mock-DOM test validates only the specific scripted interactions, not rendering.
+
+### Next small check
+
+Let the owner try **their own actual path only** and report whether any answer misstates their formed position or whether the follow-up is burdensome. Do **not** ask the owner to simulate other Christian views. Then, if still promising, use a **separate Temporary Chat** for a context-free semantic/coverage test (no invented generic-Christian persona), and later real respondents with varying backgrounds. A failed coverage case warrants refining the question or separating dimensions **before** building a longer tree.
