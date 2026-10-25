@@ -137,3 +137,11 @@ The owner tried B and reported disliking “It depends” and “I am not sure�
 **Observed:** owner's dissatisfaction with B response layout. **Verified statically:** B2 source contains binary positions, separate unsettled action and the existing multiselect structure. **Not tested yet:** actual human response to B2, real-browser behavior, comprehensibility of uncertainty control, or whether B2 feels lighter. The old B and both private-practice files remain unchanged. No scoring, profiles, historic teachers, new area or accepted decision added.
 
 **Most important open risk:** a person may have a settled **conditional** view which is neither an unconditional Yes, an unconditional No, nor “no settled view”. Narrowing sometimes solves this, but cannot always do so without a scenario or a split question. Do not silently equate conditionality and uncertainty. The next step is a small hands-on B/B2 comparison focusing on that edge case, then revise a specific question if needed. [TESTING.md](areas/bible-and-interpretive-authority/TESTING.md) contains the provisional walkthroughs. `DECISIONS.md` has not changed.
+
+---
+
+## J. B2 initial hands-on feedback and HUB handoff — 2026-10-25
+
+The owner tried the [B2 Yes/No + separate unsettled-view prototype](../prototypes/relevance-routing/yes-no-unsettled.html), without covering all answer paths, and reported that this **feels like a better way to ask questions** than the previous B-style alternatives shown together. Treat this as a **positive but limited first-person usability impression**, not as evidence that every path works or that Yes/No is valid for all theological questions.
+
+The conditional-settled-view problem remains open: a genuine “it depends on a specific condition” position must not be forced into Yes, No, or “I don't have a settled view.” No architecture decision has been accepted and no prototype has been replaced. The owner is moving discussion to HUB. Suggested HUB focus: assess whether the B2 presentation pattern merits a further narrowly targeted test, while retaining B and the two private-practice variants as baselines. [Area TESTING.md](areas/bible-and-interpretive-authority/TESTING.md) records the first-hand observation and test limitations. `DECISIONS.md` unchanged.
