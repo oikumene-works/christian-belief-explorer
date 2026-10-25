@@ -125,3 +125,21 @@ Do players understand "came to believe" as a hypothetical belief rather than an 
 **Routing:** Every selected consideration leads to one distinct, predetermined follow-up asking a narrower question (possible effect of investigating biblical teaching; seeking guidance; importance of acting against settled conscience; possible effect of community teaching; importance of examining circumstances). Each has Yes / No / It depends / I am not sure. Unselected topics receive no follow-up. No selection or unknown yields a summary immediately. No profile, score, authority ranking or inference from skipped questions.
 
 **Limit:** B's general decision context is *not* the baseline's stipulated private food rule. The B follow-ups probe different things (notably seeking guidance versus possible influence). Thus question counts are comparable as **interface load** only, not as equivalent theological coverage. The gateway can miss unrecognized considerations, and selection may reflect familiarity or salience rather than doctrinal commitment. A “No” follow-up does not mean the same thing as a topic being irrelevant. The conscience prompt may still depend on what “settled conscience” means to a respondent. “Christian community” remains referentially ambiguous. No actual human comprehension finding is claimed.
+
+---
+
+
+## B2 — Yes/No and a separate unsettled-view action (2026-10-25)
+
+**Status: experimental; not accepted questionnaire architecture.** [Try B2](../../../prototypes/relevance-routing/yes-no-unsettled.html); [B baseline](../../../prototypes/relevance-routing/index.html) remains unchanged.
+
+B2 retains B's five-item, unscored, multi-select relevance gate and optional explanatory example. Each selected topic leads to one short follow-up with **Yes / No** as the only substantive answer options and a visually separate **“I don't have a settled view on this”** button. This records `unsettled` distinctly from `no`; no choice is forced. The gate's own relevance uncertainty option is unchanged.
+
+To prevent a false inference from a narrow Yes/No answer, B2 tests only actions/considerations in the player's decision process:
+- Bible: would examine a relevant Bible passage if available (not its decisive authority);
+- Spirit: would deliberately seek guidance (not claim to receive it);
+- conscience: would be concerned if an action conflicted with settled conscience (not judge the act objectively wrong);
+- community: would consider advice from a community important to them (not grant binding jurisdiction);
+- circumstances: would independently examine relevant circumstances (not reject outside help).
+
+These are deliberate **changes in measured wording**, not merely new button labels. Conditional answers and unsettled positions must not be silently converted to No. A No means only a negative answer to the particular narrow prompt; no skipped topic is classified as rejected. “Would you” may still hide differences between habitual and hypothetical behavior, and some respondents may have a conditional settled view rather than *no* settled view. These remain targeted test failures to look for before committing to binary responses.
