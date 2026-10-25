@@ -53,6 +53,7 @@ The pilot is still in an early design and prototyping phase.
 
 See:
 
+- [Current state and cross-thread handoff](docs/CURRENT_STATE.md)
 - [Pilot area overview](docs/areas/bible-and-interpretive-authority/README.md)
 - [Original private-practice prototype (download and open locally)](prototypes/private-practice/index.html)
 - [Focused spiritual-guidance experiment (download and open locally)](prototypes/private-practice/spiritual-guidance.html)
@@ -100,6 +101,8 @@ The intended audience is ordinary users, not professional theologians.
 Technical concepts should therefore be avoided where possible, explained when necessary, and tested through concrete situations when that improves understanding.
 
 ## Documentation
+
+Start with [CURRENT_STATE.md](docs/CURRENT_STATE.md) for the latest shared HUB/pilot working picture; accepted decisions remain in [DECISIONS.md](docs/DECISIONS.md).
 
 The repository documentation is written in English.
 

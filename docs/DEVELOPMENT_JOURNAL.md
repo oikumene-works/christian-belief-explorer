@@ -401,6 +401,18 @@ Once the pilot has its first sufficiently developed real result, a **manual tria
 
 ---
 
+## 2026-10-25 — Cross-thread handoff reconciles HUB and pilot status
+
+The project-wide HUB and the area-specific pilot had diverged in their **working conversation state**: the repository contained two tested private-practice HTML variants, while the HUB had more recently explored simpler short questions, optional clarifying examples, a possible unscored relevance/context entry gate, and modular predefined routing. These refinements had not yet been implemented or accepted as final architecture.
+
+A shared [CURRENT_STATE.md](CURRENT_STATE.md) was added to distinguish **accepted decisions**, **implemented pilot experiments**, **HUB working directions** and **open questions**. The latest HUB hypothesis about issue-specific, unscored historical-teacher parallels remains deferred; tradition-profile and scoring structures were not changed.
+
+The file defines an explicit handoff practice between the two threads: read current repository records first; update the appropriate canonical file after a material new finding; then refresh the shared snapshot. Chat conversations are not automatically synchronized.
+
+No change to the accepted decisions, question code, profiles, or scoring system was made by this documentation update.
+
+---
+
 ## Current position after this journal entry
 
 The project has not yet settled the final question architecture or scoring method.

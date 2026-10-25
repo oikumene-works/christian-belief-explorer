@@ -112,6 +112,7 @@ Among the major unresolved issues are:
 
 ## Project-wide references
 
+- [Current state and cross-thread handoff](../../CURRENT_STATE.md)
 - [Project README](../../../README.md)
 - [Decisions](../../DECISIONS.md)
 - [Development Journal](../../DEVELOPMENT_JOURNAL.md)
