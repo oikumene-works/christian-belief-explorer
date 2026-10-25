@@ -121,3 +121,10 @@ Among the major unresolved issues are:
 ## Parallel relevance-first entry experiment (2026-10-25)
 
 A separate [relevance-routing prototype](../../../prototypes/relevance-routing/index.html) tests a single unscored multi-select consideration gate followed by one predefined follow-up per selected consideration. It preserves multiple relevant considerations and explicitly limits inference. This is an A/B entry experiment, **not** a replacement of either private-practice baseline or evidence that routing is easier for human respondents. See [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md) for the design and initial walkthrough matrix.
+
+---
+
+
+## B2: two positions and a separate unsettled-view control
+
+A [separate B2 prototype](../../../prototypes/relevance-routing/yes-no-unsettled.html) tests **Yes/No** as the two substantive follow-up choices, with a separate action for having no settled view. It keeps multi-select relevance routing while narrowing follow-up wording. [The original B](../../../prototypes/relevance-routing/index.html) and both private-practice variants are unchanged. This experiment does not settle how a *definite conditional* position should be recorded. Details and interpretation limits are in [QUESTIONS.md](QUESTIONS.md) and [TESTING.md](TESTING.md).
