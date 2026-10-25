@@ -193,3 +193,45 @@ This is encouraging evidence about the clarification **within the same non-blind
 **Next step:** repeat both passes from scratch in one fresh **Temporary Chat** at Medium reasoning, without mentioning these normal-chat results. Preserve the first-pass response before supplying the clarification. Only after that clean replication should the result be treated as the project's actual AI blind test.
 
 No accepted decision or scoring/profile change follows from this pretest.
+
+
+---
+
+## Clean Temporary Chat blind replication — 2026-10-25
+
+**Test setup:** a fresh Temporary Chat at **Medium** reasoning with personalization disabled. The same two-pass prompt sequence was used: first the exact question with Yes / No / unsettled choices and no project explanation; then, in the same Temporary Chat, only the short definitions of **ever** and **accept** were added. No result from the earlier normal-chat pretest was disclosed.
+
+### First pass
+
+The reviewer again recovered the core intended distinction and independently read **ever** as an existential quantifier: one possible case is enough for Yes.
+
+The same main ambiguity reappeared: **accept** could mean inward assent, public confession, practical compliance, or refraining from opposition. This generated the same apparently third settled position: practical submission to church order without an obligation to inwardly believe the interpretation true.
+
+The reviewer judged Yes and No to be meaningful opposing positions **if the terms are fixed**, chose No for itself, and rated the question **3/5** in difficulty.
+
+### Clarification pass
+
+After receiving only the prototype's definitions:
+
+- **ever** = at least one possible case, not every church or every teaching;
+- **accept** = treating the teaching as something one ought to affirm, not merely following a public rule or considering the argument;
+
+the reviewer moved the practical-submission-without-assent position clearly into **No**. It no longer found a clear settled third doctrinal position outside Yes / No / unsettled. It retained No and lowered difficulty to **2/5**.
+
+Remaining uncertainty concerned **teaching authority**, **duty before God**, and which kind of church could possess such authority. The reviewer regarded these more as substantive theological questions than as blockers to answering.
+
+### Methodological warning: self-created theological persona
+
+The supposedly generic Christian respondent spontaneously declared a substantive starting profile before answering: Scripture as the basis of faith, respect for church teaching and tradition, and personal responsibility before God for belief. That is **not a neutral cross-Christian stance**. It likely influenced the reviewer's own No answer and possibly which ambiguities it emphasized.
+
+Therefore:
+
+- use the blind review primarily for **semantic interpretation, response coverage, and inference limits**;
+- do not treat the model's own Yes/No choice as evidence about how a generic Christian would answer;
+- future blind prompts should avoid inviting the model to invent one representative Christian theology. Prefer a role such as “first-time respondent evaluating what the wording permits” and separate semantic coverage testing from simulated substantive answering.
+
+### Status
+
+The Temporary Chat replication strengthens the specific wording finding: the **accept = assent, not compliance** clarification repeatedly removes the main apparent third-position problem in this test. It does **not** validate the question with humans, establish a neutral Christian respondent model, or justify a general binary-question architecture.
+
+No accepted decision follows.
