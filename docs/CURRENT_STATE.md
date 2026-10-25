@@ -209,6 +209,6 @@ Operationally:
 - If multiple considerations can coexist, a non-exclusive structure may be more faithful than binary opposition.
 - Before adding a generic “It depends”, determine whether the real problem is ambiguous wording, mixed dimensions, missing context, or a genuine conditional position.
 
-**Next experiment:** create a small response-architecture stress test inside the Bible and Interpretive Authority pilot using three contrasting cases: one genuinely binary distinction, one genuine conditional/third-position case with follow-up routing, and one coexistence/multi-select case. Evaluate response coverage, inference limits, cognitive burden, and routing complexity. Do not add scoring or profiles merely for this experiment.
+**Next experiment:** create a small response-architecture stress test inside the Bible and Interpretive Authority pilot using three contrasting cases: one genuinely binary distinction, one genuine conditional/third-position case with follow-up routing, and one coexistence/multi-select case. Evaluate response coverage, inference limits, cognitive burden, and routing complexity. The owner should use only their own genuine path for hands-on usability feedback; they are not expected to simulate other theological positions. Cover alternative positions with explicit logical stance cases, blind semantic stress tests, and later varied human respondents. Do not add scoring or profiles merely for this experiment.
 
 No change to DECISIONS.md.
