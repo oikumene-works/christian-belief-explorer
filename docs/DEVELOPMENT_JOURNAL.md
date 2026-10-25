@@ -430,3 +430,15 @@ The most promising design direction currently combines:
 - small working prototypes before larger implementation commitments.
 
 The original private-practice prototype and the separate spiritual-guidance experiment are documented in `docs/areas/bible-and-interpretive-authority/QUESTIONS.md` and `TESTING.md`. The proposed terms, source-based profiles, scoring method and historical parallels remain open; experimental files are not accepted decisions.
+
+---
+
+## 2026-10-25 — A doctrinal-authority stress test of B2's Yes/No presentation
+
+After the owner reported that B2's Yes/No with a separate unsettled-view action felt better than B's parallel “It depends” and “I am not sure”, the next experiment deliberately used a substantively discriminating doctrine-of-authority question rather than another low-stakes question about seeking advice.
+
+An initial natural formulation — whether church interpretation should bind a believer against their own — was found insufficient: someone can coherently distinguish binding, properly authorized doctrinal determinations from local teaching or advice, while having a **settled** position rather than being uncertain. More importantly, outward obedience, serious consideration, and a duty to **assent before God** are not interchangeable.
+
+The resulting [single-question prototype](../prototypes/relevance-routing/conscience-binding-authority.html) asks if ecclesial teaching authority can **ever** impose that narrower duty even while an informed member continues to disagree. This repairs the categorical Yes/No failure for a limited-authority position (Yes means *at least one case*), but loses information about which conditions govern that case. No concerns only this duty, not all ecclesial influence.
+
+A browser-script check passed for Yes, No, unsettled, editing/reset, and narrow layouts. Theological interpretation is still a **desk hypothesis**, not a blind human finding. This is a specific example of the loop **small prototype → predicted edge case → narrowed wording → test before expansion**. Keep the earlier variants intact, and use a separate Temporary Chat for the next blind question analysis if the owner wants to proceed. No accepted project decision was made.
