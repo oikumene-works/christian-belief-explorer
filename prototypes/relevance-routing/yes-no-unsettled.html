@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yes/No routing experiment | Christian Belief Explorer</title>
+<style>:root{font:16px/1.55 system-ui,sans-serif;color:#233045;background:#f5f7fa}body{margin:0}main{max-width:43rem;margin:1.5rem auto;padding:1rem}.panel{background:white;border:1px solid #d5dce6;border-radius:.8rem;padding:1.25rem;margin:1rem 0}h1{font-size:1.8rem;line-height:1.25}fieldset{border:0;margin:0;padding:0}legend{font-size:1.16rem;font-weight:650;margin-bottom:.75rem}label{display:flex;gap:.8rem;align-items:flex-start;border:1px solid #cdd7e3;border-radius:.5rem;padding:.7rem;margin:.5rem 0}input{margin-top:.4rem;accent-color:#2857a5}button{font:inherit;padding:.65rem 1rem;border:1px solid #8190a5;border-radius:.5rem;color:#233045;background:white;cursor:pointer}.primary{background:#2857a5;color:white}.uncertain{border-style:dashed}.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0}button:disabled{opacity:.45}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e1a836;outline-offset:3px}.muted{color:#586779;font-size:.94rem}</style></head>
+<body><main><p class="muted">Christian Belief Explorer · Bible and Interpretive Authority · B2 experiment</p><h1>A short decision-path experiment</h1><p>Select any considerations that might matter. There is no ranking, scoring, or assumption that these five are exhaustive.</p><section class="panel" id="step" tabindex="-1" aria-live="polite"></section><div class="actions"><button id="back" type="button">Back</button><button id="reset" type="button">Start over</button></div><p class="muted">Experimental wording. No theology profiles or scoring. Answers remain on this page; there are no network requests or storage.</p></main>
+<script>'use strict';
+const topics=[
+{id:'bible',label:'What the Bible says',question:'When you want to understand what is right to do, would you examine a relevant Bible passage if one were available?',limit:'This asks about examining a passage, not whether your interpretation would be correct or decisive.'},
+{id:'spirit',label:'Guidance of the Holy Spirit',question:'When making a difficult decision, would you deliberately seek the Holy Spirit’s guidance?',limit:'Seeking guidance does not mean claiming to have received it or treating an impression as divine.'},
+{id:'conscience',label:'My conscience',question:'If you believed an action went against your settled conscience, would that concern you as you decided what to do?',limit:'Concern does not establish that the action is objectively wrong before God.'},
+{id:'community',label:'Teaching or rules of a Christian community',question:'If a Christian community important to you offered advice about a decision, would you consider that advice?',limit:'Considering advice does not mean submitting to a binding rule or accepting it as true.'},
+{id:'reason',label:'My own examination of the circumstances',question:'Before making a difficult decision, would you examine relevant circumstances yourself?',limit:'Examining circumstances does not mean dismissing biblical teaching or other people’s counsel.'}
+];
+let selected=[],answers={},route=[],index=0,mode='gate';const step=document.getElementById('step'),back=document.getElementById('back');
+function elem(tag,text,parent){const e=document.createElement(tag);if(text)e.textContent=text;parent.appendChild(e);return e}
+function render(focus=false){step.replaceChildren();back.disabled=mode==='gate';if(mode==='gate')gate();else if(mode==='follow')follow();else result();if(focus)step.focus()}
+function gate(){elem('h2','What might matter to you?',step);elem('p','Select any number of these considerations. You are not choosing which one is most important.',step);
+const form=elem('form','',step),fs=elem('fieldset','',form);elem('legend','Considerations',fs);
+topics.forEach(t=>{const label=elem('label','',fs),c=elem('input','',label);c.type='checkbox';c.value=t.id;c.checked=selected.includes(t.id);elem('span',t.label,label)});
+const label=elem('label','',fs),u=elem('input','',label);u.type='checkbox';u.value='unknown';u.checked=selected.includes('unknown');elem('span','I am not sure which considerations might matter',label);
+fs.addEventListener('change',event=>{if(event.target===u&&u.checked){fs.querySelectorAll('input').forEach(c=>{if(c!==u)c.checked=false})}else if(event.target.checked)u.checked=false});
+const d=elem('details','',form);elem('summary','What does this mean? — Example',d);elem('p','You may consider both a Bible passage and advice from trusted Christians when facing an unfamiliar decision. Selecting both does not rank them or state what you believe.',d);
+const b=elem('button','Continue',form);b.className='primary';form.addEventListener('submit',ev=>{ev.preventDefault();selected=[...fs.querySelectorAll('input:checked')].map(x=>x.value);route=topics.filter(t=>selected.includes(t.id));answers={};index=0;mode=route.length?'follow':'result';render(true)})}
+function follow(){const t=route[index];elem('p','Follow-up '+(index+1)+' of '+route.length,step).className='muted';const form=elem('form','',step),fs=elem('fieldset','',form);elem('legend',t.question,fs);
+for(const [value,title] of [['yes','Yes'],['no','No']]){const l=elem('label','',fs),r=elem('input','',l);r.type='radio';r.name='answer';r.value=value;r.checked=answers[t.id]===value;elem('span',title,l)}
+elem('p',t.limit,form).className='muted';const actions=elem('div','',form);actions.className='actions';const next=elem('button','Continue',actions);next.className='primary';next.type='submit';next.disabled=!['yes','no'].includes(answers[t.id]);const unset=elem('button',"I don't have a settled view on this",actions);unset.type='button';unset.className='uncertain';
+fs.addEventListener('change',()=>{next.disabled=false});
+function advance(value){answers[t.id]=value;index++;mode=index<route.length?'follow':'result';render(true)}
+form.addEventListener('submit',ev=>{ev.preventDefault();const r=fs.querySelector('input:checked');if(r)advance(r.value)});
+unset.addEventListener('click',()=>advance('unsettled'))}
+function result(){elem('h2','What you said',step);
+if(selected.includes('unknown'))elem('p','You are unsure which considerations might matter. Nothing about your theological position was inferred.',step);
+else if(!route.length)elem('p','You did not select any of the listed considerations. This does not mean that you reject any of them.',step);
+else{const ul=elem('ul','',step);route.forEach(t=>{const value=answers[t.id];const v=value==='yes'?'Yes to this specific question':value==='no'?'No to this specific question':'No settled view on this specific question';elem('li',t.label+' — '+v,ul)})}
+elem('p','An unselected topic was not tested. An unsettled view is not a No. A Yes describes only the narrow action asked about, not a hierarchy, a binding authority, or an actual experience of guidance.',step).className='muted';
+elem('p','These responses do not determine whether an action is wrong before God or which Christian tradition you resemble.',step).className='muted'}
+back.addEventListener('click',()=>{if(mode==='result'){if(route.length){index=route.length-1;mode='follow'}else mode='gate'}else if(mode==='follow'){if(index===0)mode='gate';else index--}render(true)});
+document.getElementById('reset').addEventListener('click',()=>{selected=[];answers={};route=[];index=0;mode='gate';render(true)});
+render();
+</script></body></html>
