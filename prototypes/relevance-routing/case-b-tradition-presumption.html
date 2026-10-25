@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case B: Interpretive Tradition | Christian Belief Explorer</title>
+  <style>
+    :root { font: 16px/1.55 system-ui, sans-serif; color: #243249; background: #f5f7fa; }
+    body { margin: 0; }
+    main { max-width: 45rem; margin: 1.5rem auto; padding: 1rem; }
+    h1 { font-size: 1.85rem; line-height: 1.2; margin: .5rem 0; }
+    h2 { font-size: 1.23rem; }
+    .panel { padding: 1.25rem; background: white; border: 1px solid #d5dce6; border-radius: .75rem; margin: 1rem 0; }
+    fieldset { border: 0; margin: 0; padding: 0; }
+    legend { font-size: 1.13rem; font-weight: 650; padding: 0 0 .8rem; }
+    .option { display: flex; align-items: flex-start; gap: .8rem; border: 1px solid #cdd7e3; border-radius: .5rem; padding: .75rem; margin: .55rem 0; cursor: pointer; }
+    .option input { margin-top: .32rem; accent-color: #2857a5; }
+    .option strong { display: block; }
+    button { font: inherit; cursor: pointer; border: 1px solid #8190a5; border-radius: .48rem; padding: .6rem .9rem; background: white; color: #243249; }
+    button.primary { color: white; background: #2857a5; border-color: #2857a5; }
+    button.subtle { font-size: .9rem; border-style: dashed; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    .actions { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1.1rem 0 .35rem; }
+    .muted { color: #536278; font-size: .92rem; }
+    .interpretation { border-left: 3px solid #2857a5; padding-left: .9rem; }
+    summary { cursor: pointer; }
+    details { margin: 1rem 0; }
+    :is(button, input, summary):focus-visible { outline: 3px solid #daab40; outline-offset: 2px; }
+    @media(max-width:390px) { main { padding: .65rem; } .panel { padding: .9rem; } h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="muted">Christian Belief Explorer · Bible and Interpretive Authority · response-structure stress test B</p>
+    <h1>How much weight does an established interpretation carry?</h1>
+    <p>This experiment concerns one issue only: whether long-standing agreement among Christian interpreters has weight of its own. It does not ask you to rank Scripture, the church, or your conscience.</p>
+    <section id="step" class="panel" tabindex="-1" aria-live="polite"></section>
+    <div class="actions">
+      <button id="back" type="button">Back</button>
+      <button id="reset" type="button">Start over</button>
+    </div>
+    <p class="muted">A small experimental question, not a tradition classification. Your answers remain in this page only. There is no AI, scoring, storage, or network request.</p>
+  </main>
+  <script>
+  'use strict';
+  const FIRST = [
+    { id: 'decisive', label: 'Decisive', description: 'The long-standing agreement is enough, by itself, to settle which interpretation I ought to affirm.' },
+    { id: 'rebuttable', label: 'A starting preference that can be overturned', description: 'The agreement is a reason to favor that interpretation, but stronger grounds can outweigh it.' },
+    { id: 'none', label: 'No independent preference', description: 'The agreement itself gives no added reason to favor the interpretation; its arguments must be assessed.' }
+  ];
+  const FOLLOW = [
+    { id: 'yes', label: 'Yes', description: 'My own well-supported study of Scripture could sometimes be enough.' },
+    { id: 'no', label: 'No', description: 'My own study, by itself, would not be enough.' }
+  ];
+  const step = document.getElementById('step');
+  const back = document.getElementById('back');
+  let stage = 'first';
+  let position = null;
+  let qualification = null;
+
+  function add(tag, content, parent, className) {
+    const item = document.createElement(tag);
+    if (content) item.textContent = content;
+    if (className) item.className = className;
+    parent.appendChild(item);
+    return item;
+  }
+  function choices(form, prompt, options, selected) {
+    const set = add('fieldset', '', form);
+    add('legend', prompt, set);
+    options.forEach(function(option) {
+      const label = add('label', '', set, 'option');
+      const radio = add('input', '', label);
+      radio.type = 'radio';
+      radio.name = 'answer';
+      radio.value = option.id;
+      radio.checked = selected === option.id;
+      const copy = add('span', '', label);
+      add('strong', option.label, copy);
+      if (option.description) add('span', option.description, copy);
+    });
+    return set;
+  }
+  function button(parent, caption, css, action) {
+    const b = add('button', caption, parent, css);
+    b.type = 'button';
+    if (action) b.addEventListener('click', action);
+    return b;
+  }
+  function finishFirst(value) {
+    position = value;
+    qualification = null;
+    stage = value === 'rebuttable' ? 'follow' : 'result';
+    render(true);
+  }
+  function finishFollow(value) {
+    qualification = value;
+    stage = 'result';
+    render(true);
+  }
+  function questionOne() {
+    add('p', 'Question 1 · one issue', step, 'muted');
+    add('p', 'Consider a Bible passage with more than one plausible reading. Many Christian teachers across several generations have favored one reading. Assume no specific teaching has been declared infallible.', step);
+    const form = add('form', '', step);
+    const set = choices(form,
+      'Apart from the reasons those teachers give, how much weight should their long-standing agreement itself carry when deciding what the passage means?',
+      FIRST, position);
+    const details = add('details', '', form);
+    add('summary', 'What does this mean? — Example', details);
+    add('p', 'Suppose two readings of a passage have been proposed. Finding that Christian teachers over several generations favored one reading could settle the matter for you, give it a revisable preference, or add no weight independently of their arguments. This illustrates the question; no particular doctrine is being tested.', details);
+    const actions = add('div', '', form, 'actions');
+    const next = button(actions, 'Continue', 'primary');
+    next.type = 'submit';
+    next.disabled = !FIRST.some(function(x) { return x.id === position; });
+    set.addEventListener('change', function() { next.disabled = false; });
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selected = set.querySelector('input[name="answer"]:checked');
+      if (selected) finishFirst(selected.value);
+    });
+    const secondary = add('div', '', form, 'actions');
+    button(secondary, "I don't have a settled view on this", 'subtle', function() { finishFirst('unsettled'); });
+    button(secondary, "My settled view isn't represented", 'subtle', function() { finishFirst('unrepresented'); });
+  }
+  function questionTwo() {
+    add('p', 'Follow-up · only for the revisable-preference answer', step, 'muted');
+    add('p', 'You give long-standing agreement some initial weight, but think it can be outweighed. This question asks about one possible way of doing so.', step);
+    const form = add('form', '', step);
+    const set = choices(form,
+      'Could your own careful study of Scripture ever be enough to set aside that initial preference, even without wider agreement?',
+      FOLLOW, qualification);
+    const actions = add('div', '', form, 'actions');
+    const next = button(actions, 'Continue', 'primary');
+    next.type = 'submit';
+    next.disabled = !FOLLOW.some(function(x) { return x.id === qualification; });
+    set.addEventListener('change', function() { next.disabled = false; });
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selected = set.querySelector('input[name="answer"]:checked');
+      if (selected) finishFollow(selected.value);
+    });
+    const secondary = add('div', '', form, 'actions');
+    button(secondary, "I don't have a settled view on this", 'subtle', function() { finishFollow('unsettled'); });
+    button(secondary, "My settled view isn't represented", 'subtle', function() { finishFollow('unrepresented'); });
+  }
+  function result() {
+    add('h2', 'What can be inferred', step);
+    let reading = '';
+    if (position === 'decisive') {
+      reading = 'You regard the long-standing agreement of Christian teachers as independently decisive for the interpretation described here.';
+    } else if (position === 'none') {
+      reading = 'You give that long-standing agreement no independent preference apart from the reasons offered for the reading.';
+    } else if (position === 'unsettled') {
+      reading = 'You do not have a settled position on the independent weight of this kind of long-standing agreement. This is not a negative answer.';
+    } else if (position === 'unrepresented') {
+      reading = 'You have a settled view that these three positions do not represent. This is a question-design gap, not uncertainty.';
+    } else if (position === 'rebuttable') {
+      reading = 'You give long-standing agreement a real but revisable preference.';
+      if (qualification === 'yes') reading += ' Your own carefully supported scriptural judgment could sometimes be sufficient to outweigh it without wider agreement.';
+      if (qualification === 'no') reading += ' Your own scriptural judgment alone would not suffice to outweigh it; which additional grounds or process would be needed remains unknown.';
+      if (qualification === 'unsettled') reading += ' You are unsure whether your own study alone can outweigh that preference.';
+      if (qualification === 'unrepresented') reading += ' The offered follow-up answers do not describe your formed view; no conclusion about its conditions is drawn.';
+    }
+    add('p', reading, step, 'interpretation').setAttribute('data-testid', 'inference');
+    add('p', 'Not determined: whether any specific church or teacher is correct, what reasons justify an interpretation, whether teaching binds conscience, how you would act publicly, and which tradition you belong to.', step, 'muted');
+    if (position === 'rebuttable') add('p', 'This follow-up checks only whether individual scriptural judgment could ever suffice. It does not list all possible ways to overturn the preference.', step, 'muted');
+  }
+  function render(focus) {
+    step.replaceChildren();
+    back.disabled = stage === 'first';
+    if (stage === 'first') questionOne();
+    if (stage === 'follow') questionTwo();
+    if (stage === 'result') result();
+    if (focus) step.focus();
+  }
+  back.addEventListener('click', function() {
+    if (stage === 'result' && position === 'rebuttable') stage = 'follow';
+    else stage = 'first';
+    render(true);
+  });
+  document.getElementById('reset').addEventListener('click', function() {
+    position = null;
+    qualification = null;
+    stage = 'first';
+    render(true);
+  });
+  render(false);
+  </script>
+</body>
+</html>
