@@ -113,3 +113,9 @@ Ask 3–5 people to try A and B in counterbalanced order. For each, collect ques
 **Assessment:** A lighter-looking interface is mechanically plausible but remains **untested** for comprehension and effort. The narrower formulations reduce overclaiming but also measure something different from some B questions. In particular, asking whether someone would *consider* community advice cannot answer whether they would *obey* a binding teaching. For conditional answers, first test whether an explicit circumstance can narrow the question; if not, split a specific dimension rather than forcing binary choice.
 
 **Next step:** have the owner try B and B2 on the same selections, paying particular attention to an honestly conditional answer and the perceived meaning of the separate unsettled button. Record exact question and missing condition. Test Back/edit/reset and mobile/embedded-browser behavior before claiming operational parity.
+
+---
+
+## Owner's first hands-on B2 impression — 2026-10-25
+
+The owner tried the separate `yes-no-unsettled.html` prototype and reported: **“This feels like a better way to ask”** than the previous B response presentation. The owner did **not** visit every answer path. This is **one preliminary, subjective usability observation** about the response interface, not a complete-path test, a comparative usability study, or theological validation. No specific answer wording was reported as failing or as successfully resolving a conditional view. Retain B as the comparison baseline; keep the unsettled-vs-conditional distinction open. Discussion moves to HUB, which should read the updated `docs/CURRENT_STATE.md` before deciding any next step. No accepted project decision follows.
