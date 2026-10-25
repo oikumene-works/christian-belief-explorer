@@ -119,3 +119,37 @@ Ask 3–5 people to try A and B in counterbalanced order. For each, collect ques
 ## Owner's first hands-on B2 impression — 2026-10-25
 
 The owner tried the separate `yes-no-unsettled.html` prototype and reported: **“This feels like a better way to ask”** than the previous B response presentation. The owner did **not** visit every answer path. This is **one preliminary, subjective usability observation** about the response interface, not a complete-path test, a comparative usability study, or theological validation. No specific answer wording was reported as failing or as successfully resolving a conditional view. Retain B as the comparison baseline; keep the unsettled-vs-conditional distinction open. Discussion moves to HUB, which should read the updated `docs/CURRENT_STATE.md` before deciding any next step. No accepted project decision follows.
+
+---
+
+## One-question B2 doctrinal-authority stress test — 2026-10-25
+
+**File:** [conscience-binding-authority.html](../../../prototypes/relevance-routing/conscience-binding-authority.html). The prior B/B2 and private-practice files were **not modified**.
+
+### Implementation verification
+
+Tested the exact HTML bytes in headless Chromium (Playwright, via `set_content`). After uploading to `main`, verified that the remote Git blob SHA `18893b1a934e4c9f8341f1ffa27b8feab579dfbb` equals the hash of the tested local file.
+
+**Passed:** exactly Yes and No radio options; separate `unsettled` action; no forced answer; correct and distinct summaries for Yes, No, and unsettled; expandable explanatory example; change-answer preserving the earlier selection; changing Yes to No; reset clearing the answer; widths 320, 390, 768 px without horizontal overflow; no page script errors or network requests observed. This is a scripted browser behavior test, **not** a human comprehension test or a test of the app's embedded browser.
+
+### Deliberate conceptual counterexamples (desk stress tests, not participant responses)
+
+- **Conditional church authority:** a church may bind conscience only through specific authorized doctrinal decisions, not routine local advice. The overly broad question “Must one follow church teaching over one's reading?” fails. Restricting the actual question to whether such authority can **ever** exist permits Yes while leaving its conditions unmeasured.
+- **Persuasive but not binding:** a player takes church teaching very seriously, but would not accept an interpretation as religiously obligatory while still unconvinced by it. The narrow answer can be No; No must not be expanded into “rejects church authority”.
+- **External compliance without assent:** a player follows community discipline for membership or unity without accepting the interpretation as true. The question addresses religiously obligatory **assent**, not external behavior; No can coexist with compliance.
+- **Conditionality based on later persuasion:** a player accepts the teaching once persuaded by textual arguments, but not *because of institutional authority during continuing disagreement*. The narrow answer is No.
+- **Unsettled authority view:** separate `unsettled` route expresses lack of a settled position. It must not be used to capture a definite view with special conditions.
+
+### Evaluation of the seven requested concerns
+
+1. **Exact distinction:** the *possible existence* of church-teaching-based conscience duty to affirm an interpretation despite personal disagreement.
+2. **Yes:** acknowledges at least one such possible instance; no claim of universal church authority.
+3. **No:** denies that narrow duty under continuing disagreement; does not deny other forms of ecclesial authority or scriptural persuasion.
+4. **Neither:** entails a named church, teaching, special conditions, doctrinal truth, actual conformity, or denominational identity.
+5. **Settled conditional:** found in the desk test (limited formal decisions vs ordinary advice); it defeats the unbounded question but fits the *ever* formulation as Yes. The qualifying conditions remain invisible.
+6. **Repair:** narrowed the measured duty (assent vs public compliance/advice) and quantifier (*ever*) rather than splitting into two questions. Test whether this narrowing is understood.
+7. **Discrimination:** meaningful but coarse; it separates the categorical denial of such moral binding force from its possible existence. It does not separate narrow conditional affirmation from very broad affirmation. Whether it is *usefully* discriminating for ordinary respondents remains unverified.
+
+**Still untested:** real-user ease; the meaning of “a Christian church”, “duty before God”, and “accept”; the effect of the optional explanatory example; whether “ever” is experienced as overly abstract; real embedded-browser compatibility. No independent theological validation was performed.
+
+**Next step if the owner finds this intelligible:** perform a **blind wording/inference test in a separate Temporary Chat**, giving only the exact question and choices first, before exposing this intended interpretation. Ask the tester to paraphrase the question, locate hidden assumptions and settled conditional counterexamples, identify Yes/No inference limits, and suggest at most one targeted correction. Do not treat a positive blind review as participant validation or expand the whole questionnaire yet.
