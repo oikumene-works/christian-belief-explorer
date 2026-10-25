@@ -54,6 +54,7 @@ The pilot is still in an early design and prototyping phase.
 See:
 
 - [Pilot area overview](docs/areas/bible-and-interpretive-authority/README.md)
+- [Try the private-practice prototype (download and open the HTML file locally)](prototypes/private-practice/index.html)
 - [Project decisions](docs/DECISIONS.md)
 - [Development journal](docs/DEVELOPMENT_JOURNAL.md)
 
@@ -101,7 +102,7 @@ Technical concepts should therefore be avoided where possible, explained when ne
 
 The repository documentation is written in English.
 
-Development of Finnish player-facing wording may still be recorded in Finnish when exact phrasing matters.
+Development discussion may take place in Finnish, but repository content, including draft player-facing wording and prototypes, is written in English.
 
 The documentation is intended to preserve both:
 

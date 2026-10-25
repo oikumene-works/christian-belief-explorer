@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Practice | Christian Belief Explorer — Prototype</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; line-height: 1.55; color-scheme: light; }
+    body { margin: 0; color: #233045; background: #f5f7fa; }
+    main { max-width: 44rem; margin: 2rem auto; padding: 1rem; }
+    h1 { font-size: 1.85rem; margin: .3rem 0; line-height: 1.2; }
+    h2 { font-size: 1.25rem; }
+    .eyebrow, .muted { color: #566376; font-size: .92rem; }
+    .panel { background: white; border: 1px solid #d5dce6; border-radius: .8rem; padding: 1.25rem; margin: 1rem 0; }
+    .scenario { border-left: 4px solid #657994; }
+    fieldset { border: 0; margin: 1rem 0 0; padding: 0; }
+    legend { font-size: 1.16rem; font-weight: 650; margin-bottom: .85rem; }
+    .option { display: flex; gap: .8rem; align-items: center; padding: .75rem; border: 1px solid #cdd7e3; border-radius: .5rem; margin: .5rem 0; cursor: pointer; }
+    .option:has(input:checked) { border-color: #2857a5; background: #edf3ff; }
+    input { accent-color: #2857a5; width: 1.1rem; height: 1.1rem; flex: none; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.3rem; }
+    button { padding: .65rem 1rem; border-radius: .5rem; font: inherit; cursor: pointer; border: 1px solid #8190a5; background: #fff; color: #233045; }
+    button.primary { background: #2857a5; color: #fff; border-color: #2857a5; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #e1a836; outline-offset: 3px; }
+    ul { padding-left: 1.4rem; }
+    .result-line { margin: .65rem 0; }
+    .note { padding-top: .5rem; font-size: .9rem; color: #586779; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Christian Belief Explorer · Bible and Interpretive Authority · Draft prototype</p>
+  <h1>A private practice and a community's rule</h1>
+  <section class="panel scenario" aria-labelledby="scenario-title">
+    <h2 id="scenario-title">Imagine this situation</h2>
+    <p>You belong to a Christian community that matters to you. It announces a rule: members must avoid a certain ordinary food on one day each week, even when eating alone.</p>
+    <p>Nobody observes or checks what you eat. For this exercise, assume Scripture does not directly command or forbid eating this food on that day. You need not assume that the community has the right to make the rule.</p>
+  </section>
+  <section id="step" class="panel" tabindex="-1" aria-live="polite" aria-atomic="true"></section>
+  <div class="actions">
+    <button id="back" type="button">Back</button>
+    <button id="reset" type="button">Start over</button>
+  </div>
+  <p class="note">Experimental questions, not a tradition-matching test. All paths are predefined. Answers stay in this page's memory and are not sent or stored.</p>
+</main>
+<script>
+  'use strict';
+  const QUESTIONS = {
+    freedom: {
+      prompt: 'Apart from the community\'s rule, do you believe you would be free before God to eat the food on that day?',
+      choices: [['yes', 'Yes'], ['no', 'No'], ['unsure', 'I am not sure']],
+      next: {yes: 'authority', no: 'result', unsure: 'result'}
+    },
+    authority: {
+      prompt: 'Even if eating it is otherwise permitted, could this community legitimately require its members to refrain in private?',
+      choices: [['yes', 'Yes'], ['no', 'No'], ['depends', 'It depends'], ['unsure', 'I am not sure']],
+      next: {yes: 'conscience', no: 'conscience', depends: 'conscience', unsure: 'conscience'}
+    },
+    conscience: {
+      prompt: 'If you knowingly ate it in private anyway, would breaking this rule itself be wrong before God?',
+      choices: [['yes', 'Yes'], ['no', 'No'], ['depends', 'It depends'], ['unsure', 'I am not sure']],
+      next: {yes: 'scripture', no: 'scripture', depends: 'scripture', unsure: 'scripture'}
+    },
+    scripture: {
+      prompt: 'Could relevant biblical teaching about freedom or obedience help you settle or revise that answer?',
+      choices: [['yes', 'Yes, possibly'], ['no', 'No'], ['unsure', 'I am not sure']],
+      next: {yes: 'community', no: 'community', unsure: 'community'}
+    },
+    community: {
+      prompt: 'Could better reasons for or against this community\'s authority to set such a rule help you settle or revise that answer?',
+      choices: [['yes', 'Yes, possibly'], ['no', 'No'], ['unsure', 'I am not sure']],
+      next: {yes: 'apostolic', no: 'apostolic', unsure: 'apostolic'}
+    },
+    apostolic: {
+      prompt: 'Could evidence that this practice came from the apostles help you settle or revise that answer?',
+      choices: [['yes', 'Yes, possibly'], ['no', 'No'], ['unsure', 'I am not sure']],
+      next: {yes: 'result', no: 'result', unsure: 'result'}
+    }
+  };
+  const ORDER = Object.keys(QUESTIONS);
+  const GROUND_NAMES = {
+    scripture: 'Relevant biblical teaching',
+    community: 'Reasons about the community\'s authority',
+    apostolic: 'Evidence of apostolic origin'
+  };
+  let answers = {};
+  let trail = ['freedom'];
+  let current = 'freedom';
+  const step = document.getElementById('step');
+  const back = document.getElementById('back');
+
+  function addText(parent, tag, content, className) {
+    const el = document.createElement(tag);
+    el.textContent = content;
+    if (className) el.className = className;
+    parent.appendChild(el);
+    return el;
+  }
+
+  function showQuestion() {
+    const question = QUESTIONS[current];
+    addText(step, 'p', 'Question ' + trail.length + ' · up to 6', 'eyebrow');
+    const form = document.createElement('form');
+    const fieldset = document.createElement('fieldset');
+    addText(fieldset, 'legend', question.prompt);
+    question.choices.forEach(function(choice) {
+      const label = document.createElement('label');
+      label.className = 'option';
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'answer';
+      radio.value = choice[0];
+      radio.checked = answers[current] === choice[0];
+      const description = document.createElement('span');
+      description.textContent = choice[1];
+      label.append(radio, description);
+      fieldset.appendChild(label);
+    });
+    form.appendChild(fieldset);
+    const continueButton = addText(form, 'button', 'Continue', 'primary');
+    continueButton.type = 'submit';
+    continueButton.disabled = !answers[current];
+    form.addEventListener('change', function() { continueButton.disabled = false; });
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const chosen = form.querySelector('input[name="answer"]:checked');
+      if (!chosen) return;
+      const index = ORDER.indexOf(current);
+      ORDER.slice(index + 1).forEach(function(id) { delete answers[id]; });
+      answers[current] = chosen.value;
+      const next = question.next[chosen.value];
+      trail = trail.slice(0, trail.indexOf(current) + 1);
+      trail.push(next);
+      current = next;
+      render(true);
+    });
+    step.appendChild(form);
+  }
+
+  function showResult() {
+    addText(step, 'h2', 'Your answers so far');
+    if (answers.freedom !== 'yes') {
+      addText(step, 'p', answers.freedom === 'no'
+        ? 'You do not regard the practice as freely permitted apart from the community\'s rule.'
+        : 'You are not sure whether the practice is freely permitted apart from the community\'s rule.', 'result-line');
+      addText(step, 'p', 'This case does not isolate community authority from your other reasons for refraining. No conclusion about the community\'s power or a conscience-level obligation follows from this answer.');
+      return;
+    }
+    addText(step, 'p', 'You regard eating the food as permitted in itself.', 'result-line');
+    const authority = {
+      yes: 'You think the community could legitimately set this private requirement.',
+      no: 'You do not think the community could legitimately set this private requirement.',
+      depends: 'Whether the community could legitimately set the requirement depends on further conditions.',
+      unsure: 'You are unsure whether the community could legitimately set the requirement.'
+    };
+    const conscience = {
+      yes: 'You think knowingly breaking the rule would itself be wrong before God.',
+      no: 'You do not think knowingly breaking the rule would itself be wrong before God.',
+      depends: 'Whether breaking the rule would be wrong before God depends on further conditions.',
+      unsure: 'You are unsure whether breaking the rule would be wrong before God.'
+    };
+    addText(step, 'p', authority[answers.authority], 'result-line');
+    addText(step, 'p', conscience[answers.conscience], 'result-line');
+    if (answers.authority === 'yes' && answers.conscience === 'no') {
+      addText(step, 'p', 'Notable distinction: you allow a community to set a private rule without treating a breach as wrong before God.');
+    } else if (answers.authority === 'no' && answers.conscience === 'yes') {
+      addText(step, 'p', 'This combination needs clarification: you reject the community\'s right to impose the rule but still regard a deliberate breach as wrong before God. Other grounds, such as a personal promise, have not been tested.');
+    }
+    const possible = [], unresolved = [];
+    Object.keys(GROUND_NAMES).forEach(function(id) {
+      if (answers[id] === 'yes') possible.push(GROUND_NAMES[id]);
+      if (answers[id] === 'unsure') unresolved.push(GROUND_NAMES[id]);
+    });
+    addText(step, 'h2', 'Possible grounds for reconsideration');
+    addText(step, 'p', possible.length ? possible.join('; ') + '.' : 'You did not select any of the three proposed grounds as potentially relevant. This does not mean nothing could change your view.');
+    if (unresolved.length) addText(step, 'p', 'Still uncertain: ' + unresolved.join('; ') + '.');
+    addText(step, 'p', 'A possible ground is not necessarily a sufficient or decisive ground. These answers do not identify a denomination, prove a tradition match, or resolve which specific community may hold authority.', 'note');
+  }
+
+  function render(moveFocus) {
+    step.replaceChildren();
+    if (current === 'result') showResult(); else showQuestion();
+    back.disabled = trail.length < 2;
+    if (moveFocus) step.focus();
+  }
+  back.addEventListener('click', function() {
+    if (trail.length < 2) return;
+    trail.pop();
+    current = trail[trail.length - 1];
+    render(true);
+  });
+  document.getElementById('reset').addEventListener('click', function() {
+    answers = {};
+    trail = ['freedom'];
+    current = 'freedom';
+    render(true);
+  });
+  render();
+</script>
+</body>
+</html>

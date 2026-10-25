@@ -79,15 +79,18 @@ A statement such as "I must ultimately decide for myself what interpretation I a
 
 These must not be treated as the same position.
 
-## Planned pilot documentation
+## First runnable prototype
 
-The following files will be added and maintained as the pilot develops:
+A narrow [private-practice prototype](../../../prototypes/private-practice/index.html) now explores a fictional dietary rule that nobody can observe or check. Download its standalone HTML file and open it in a browser. It uses predefined questions and browser-only logic; no AI, score, tradition comparison, or external service is involved.
 
-- `TERMS.md` — concepts whose meaning needs explicit control or explanation;
-- `QUESTIONS.md` — question paths, answer options, and their status;
-- `PROFILES.md` — named, source-based comparison profiles and their scope;
-- `SCORING.md` — inference, compatibility, weighting, and result logic;
-- `TESTING.md` — prototypes, blind tests, test cases, and findings.
+This is an experiment, not an accepted questionnaire. The scenario and its inferences are specified in [QUESTIONS.md](QUESTIONS.md); test checks and known gaps are in [TESTING.md](TESTING.md).
+
+## Pilot documentation
+
+- [QUESTIONS.md](QUESTIONS.md) — the currently tested question path, answer options, routing, and inference limits;
+- [TESTING.md](TESTING.md) — smoke checks, candidate blind tests, and caveats.
+
+Still planned: `TERMS.md` (controlled vocabulary), `PROFILES.md` (source-based comparisons), and `SCORING.md` (comparison rules). These should not be treated as settled or implemented.
 
 ## Current open questions
 

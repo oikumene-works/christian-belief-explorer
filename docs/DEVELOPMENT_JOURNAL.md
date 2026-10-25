@@ -339,6 +339,28 @@ Third-party source material remains subject to its own rights.
 
 ---
 
+## 2026-10-25 — First runnable private-practice prototype
+
+A standalone, English-language HTML prototype was added at `prototypes/private-practice/index.html`. It uses a hypothetical dietary rule observed privately, not the earlier public standing-during-prayer example. No one checks compliance. The scenario does not assume that the community has legitimate authority to issue the rule.
+
+The initial question asks whether the player regards the practice as permitted **apart from** the community's rule. No and unsure answers terminate this narrow branch without an authority inference, because the supposedly optional act may not be optional to that player.
+
+When the player regards the act as permitted in itself, separate short questions ask (1) whether the community may legitimately require it and (2) whether knowingly breaking that rule would itself be wrong before God. The result can describe these as different judgments. The reverse combination is flagged for further inquiry, not treated as a logical contradiction.
+
+Three additional, separate questions test whether biblical teaching, better grounds for community authority, or evidence of apostolic origin could help settle or revise the conscience judgment. These are **possibilities**, not ranked sources, conclusive grounds, or profile scores.
+
+### What was actually tested
+
+A local headless Chromium smoke test passed early-stop paths, two cross-cutting authority/conscience combinations, ground reporting, back/edit/reset behavior, and narrow-screen rendering. See the area-specific `TESTING.md`. No blind human comprehension test or source-based theological validation has yet been run.
+
+### Remaining risk
+
+A fictional private food restriction may still evoke real fasting traditions. The word *community* remains underspecified in relation to denomination, local congregation, or personal membership. Personal promises and indirect scriptural grounds are not yet modeled.
+
+This is a prototype result rather than a new accepted theological classification or final question architecture.
+
+---
+
 ## Current position after this journal entry
 
 The project has not yet settled the final question architecture or scoring method.
@@ -355,8 +377,4 @@ The most promising design direction currently combines:
 - blind testing of question wording and inference rules;
 - small working prototypes before larger implementation commitments.
 
-The next documentation phase is to move the current pilot material into dedicated files under:
-
-`docs/areas/bible-and-interpretive-authority/`
-
-without retroactively presenting draft material as settled.
+The narrow pilot path and its smoke-test record are now in `docs/areas/bible-and-interpretive-authority/QUESTIONS.md` and `TESTING.md`. The proposed terms, source-based profiles, and scoring method remain open; experimental files are not accepted decisions.

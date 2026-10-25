@@ -158,9 +158,9 @@ The canonical repository is:
 
 `oikumene-works/christian-belief-explorer`
 
-Project documentation is written in English.
+All repository content, including draft player-facing wording and prototype interfaces, is written in English.
 
-Exact Finnish player-facing wording may be preserved in Finnish where translation would hide relevant nuances.
+Development discussion with the project owner may take place in Finnish.
 
 ---
 
