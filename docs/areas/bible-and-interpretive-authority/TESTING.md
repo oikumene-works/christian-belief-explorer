@@ -157,9 +157,9 @@ Tested the exact HTML bytes in headless Chromium (Playwright, via `set_content`)
 
 ---
 
-## First blind Temporary Chat review of conscience-binding question — 2026-10-25
+## Context-restricted normal-chat pretest of conscience-binding question — 2026-10-25
 
-**Test type:** context-isolated AI blind review in a new Temporary Chat, reasoning level **Medium**. The reviewer received only the exact question and the three visible response choices (Yes / No / “I don't have a settled view on this”). It did **not** receive the project's purpose, intended inference, explanatory example, always-visible definition note, repository context, scoring ideas, or tradition profiles. This is a model-based semantic stress test, **not** a human usability result.
+**Test type:** prompt-restricted AI pretest in a **normal ChatGPT conversation**, reasoning level **Medium**. The prompt instructed the reviewer to act as a first-time Christian respondent and not use outside sources or infer the author's purpose. However, because this was not a Temporary Chat, prior account/conversation context cannot be excluded. Treat the result as a useful pretest, **not as a clean blind test** and not as human usability evidence.
 
 ### Main observations
 
@@ -177,8 +177,19 @@ Tested the exact HTML bytes in headless Chromium (Playwright, via `set_content`)
 
 ### Interpretation
 
-This blind review does **not** show that the question is human-readable or that binary response architecture is generally valid. The prompt explicitly asked the reviewer to search for hidden assumptions and settled non-binary positions, so the result is a structured adversarial semantic review rather than a spontaneous first-user reaction.
+This pretest does **not** show that the question is human-readable or that binary response architecture is generally valid. The prompt explicitly asked the reviewer to search for hidden assumptions and settled non-binary positions, and normal-chat context cannot be ruled out.
 
-The finding does support one concrete next check: the current prototype already contains an always-visible note defining **accept** as something one ought to affirm rather than mere public compliance, plus an optional explanatory example. Test whether exposing that clarification actually removes the reviewer's main ambiguity **without** teaching a stronger position than the question itself warrants.
+### Same-chat clarification pass
 
-No accepted decision or scoring/profile change follows from this test.
+The same reviewer was then given only the prototype's two short clarifications:
+
+- **ever** = at least one possible case, not every church or every teaching;
+- **accept** = treating the teaching as something one ought to affirm, not merely following a public rule or considering the argument.
+
+The reviewer reported that the core meaning did not change but became clearer. The assent-versus-compliance ambiguity was resolved: practical submission without internal assent became **No**, not a third position. It could no longer identify a clearly settled third doctrinal position outside Yes/No/unsettled. Its answer remained **No**, while its difficulty rating fell from **3/5 to 2/5**. Remaining interpretive questions concerned *teaching authority*, *duty before God*, and what kind of church could possess such authority, but the reviewer said these now felt more like substantive theological issues than wording failures.
+
+This is encouraging evidence about the clarification **within the same non-blind pretest**, not independent validation.
+
+**Next step:** repeat both passes from scratch in one fresh **Temporary Chat** at Medium reasoning, without mentioning these normal-chat results. Preserve the first-pass response before supplying the clarification. Only after that clean replication should the result be treated as the project's actual AI blind test.
+
+No accepted decision or scoring/profile change follows from this pretest.
