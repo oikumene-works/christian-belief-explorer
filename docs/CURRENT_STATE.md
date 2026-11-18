@@ -228,3 +228,16 @@ No change to DECISIONS.md.
 **Implementation verification:** the exact \`main\` JavaScript was exercised through a small simulated-DOM harness: **17 checks passed** for all substantive main responses, the two middle-branch outcomes, distinct unsettled/unrepresented states at each stage, navigation, reset, and stale-answer clearing. **This is not a graphical browser test**. No actual user comprehension study or new blind semantic test has yet been performed.
 
 **Next small step:** the project owner tests only their own authentic path for meaning and usability; other paths remain explicit constructed stance tests until an independent blind semantic check and, later, actual respondents from varied backgrounds. Do not add profiles, scoring, historical parallels, new areas, or a large branch tree. Pilot reasoning, bounded inferences and testing limitations are documented in [QUESTIONS.md](areas/bible-and-interpretive-authority/QUESTIONS.md), [TESTING.md](areas/bible-and-interpretive-authority/TESTING.md), and [DEVELOPMENT_JOURNAL.md](DEVELOPMENT_JOURNAL.md). Existing prototypes and \`DECISIONS.md\` are unchanged.
+
+
+---
+
+## P. Alternative product concept under consideration — 2026-11-18
+
+The owner is reconsidering whether the current cumulative tradition-comparison game should be built as originally conceived.
+
+**New hypothesis:** each experience could consist of **one independent theological question**. After the player answers, the result would show how selected, source-based Christian voices from different periods have addressed that same question or a tightly bounded equivalent issue. “Theologian” is meant broadly: historical Christian teachers and thinkers, not only modern academic theologians.
+
+This would promote the previously deferred **historical-parallels** idea from an optional result feature to a possible core product structure. It may remove much of the need for cumulative scoring, tradition-profile aggregation, and large question trees.
+
+**Not decided.** Before changing project scope, compare one small end-to-end prototype of this concept against the current approach. Preserve strict issue-level sourcing and do not imply that similarity on one question means similarity in overall theology. No change to DECISIONS.md.
