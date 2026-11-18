@@ -541,3 +541,24 @@ The new [case B file](../prototypes/relevance-routing/case-b-tradition-presumpti
 **Evidence discipline:** a 17-case check executed the committed JavaScript under a simulated DOM; this is *not* a browser usability check. Explicit logical stance cases include a middle view with sufficiency Yes, a middle view with sufficiency No, and an unrepresented position depending on apostolic status. These are constructed cases, **not** respondent observations. Existing evidence on the role of tradition and scriptural reassessment can be found in the [UMC theological task](https://www.umc.org/en/content/book-of-discipline-105-our-theological-task) and [theological interpretation overview](https://www.thegospelcoalition.org/essay/theological-interpretation-of-scripture/); this is orientation, not adoption of a tradition profile.
 
 **Next:** owner's genuine path only, then blind semantic coverage testing and, later, diverse human participants. If an unrepresented coherent position appears, revisit the measured context rather than automatically adding a fourth answer or expanding a large branch tree. No scores, source profiles or historical-teacher matching. No change to \`DECISIONS.md\`.
+
+
+---
+
+## 2026-11-18 — Alternative product concept: one question followed by historical voices
+
+After a pause in development, the owner questioned whether the current tradition-comparison game should be built in its present form at all.
+
+A substantially simpler alternative was proposed:
+
+1. present **one self-contained theological question**;
+2. let the player answer it;
+3. show how a curated set of Christian teachers, thinkers, pastors, theologians, church fathers, reformers, mystics, confessors, or other historically documented Christian voices have answered or framed that **same specific issue**.
+
+Here “theologian” is used in a deliberately broad sense rather than the modern academic-professional sense.
+
+This would make the previously deferred idea of **historical parallels** central to the product rather than a secondary result layer. It could eliminate or greatly reduce the need for cumulative tradition scoring, cross-question profile construction, and large branching architectures.
+
+The concept has not been adopted. Its main design attraction is that each question becomes an independent, source-based exploration unit. Its main risks are source/context burden, anachronism, prestige/name bias, uneven historical documentation, and the danger of implying broad theological similarity from one issue-specific parallel.
+
+A useful next comparison would be one complete end-to-end prototype of this new form using a single existing question and a small set of carefully sourced historical voices, then compare its informational value and usability against the current tradition-profile direction. No change to DECISIONS.md.
