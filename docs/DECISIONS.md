@@ -173,3 +173,19 @@ The repository uses **CC0 1.0 Universal** for original project material unless o
 The intention is to allow others to reuse, modify, redistribute, and build upon the project's original material as freely as possible, including commercially and without an attribution requirement.
 
 Third-party material is not relicensed by this decision.
+
+---
+
+## 2026-11-20 — Canonical public home and supported languages
+
+**Status:** Accepted
+
+The canonical public home of the service will be **`oikumene.works`**.
+
+The service will be developed for both **Finnish- and English-speaking audiences**. Question wording, answer options, result text, and historical-voice summaries must be edited and tested in each language rather than treated as mechanically interchangeable translations.
+
+`wennström.fi` may introduce the project, explain its personal background, and link to the service, but it must not host a separate canonical copy of the question units.
+
+The public service may be presented under the Oikumene Works identity rather than through the project owner's personal site. Editorial responsibility, project origin, source repository, and a route for corrections or feedback must nevertheless remain easy to find.
+
+**Reason:** The service has developed into an independent, source-based tool for a wider audience rather than primarily a personal-site feature. A single canonical home avoids duplicate versions, supports bilingual development, and allows the project to grow beyond the framing of one person's website while preserving transparent responsibility.
