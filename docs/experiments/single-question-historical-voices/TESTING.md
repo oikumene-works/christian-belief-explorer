@@ -1,6 +1,6 @@
 # Testing — single-question historical-voices prototype
 
-**Status:** Source checks and a headless Chromium interaction test completed. No human comprehension test or historical-card blind review has yet been completed.
+**Status:** Source checks, a headless Chromium interaction test, and the project owner's first hands-on concept test have been completed. No independent human comprehension test or historical-card blind review has yet been completed.
 
 ## Prototype
 
@@ -56,16 +56,39 @@ All answer paths show the same three bounded source cards:
 
 The selected answer changes only their order and short relationship labels. It does not hide opposing voices or calculate a score.
 
-## First hands-on test
+## First hands-on test by the project owner — 2026-11-20
 
-The project owner should use only their own genuine answer path and then assess:
+The owner used the prototype through their own genuine answer path and reported that the single-question historical-voices format was **much better** for the purpose originally intended for the project.
 
-1. Is the main question understandable without theological vocabulary?
-2. Does the answer summary describe the chosen position without overclaiming?
-3. Do the historical cards add understanding beyond the answer itself?
-4. Are the limits of each comparison sufficiently prominent?
-5. Do famous names overshadow the actual view and reasoning?
-6. Does the unit feel complete enough to make another independent question appealing?
+The owner identified three closely related kinds of value:
+
+1. clarifying one's own thinking;
+2. comparing it with how other Christians have thought;
+3. potentially stimulating more deliberate, rational reflection on matters of faith.
+
+This is the first direct product-fit observation that the historical-voices concept serves the owner's original aim better than the cumulative tradition-comparison direction.
+
+### Interpretation limits
+
+- This is one person's first-hand response to one question unit.
+- It does not establish that every question will support equally useful historical sourcing.
+- It does not establish comprehension or value for other respondents.
+- It does not yet show whether the effect comes mainly from the historical material, the independent-question structure, the absence of scoring, or their combination.
+
+The observation is nevertheless stronger than a preference for visual presentation: it concerns alignment between the prototype and the intended purpose of the project.
+
+## Next concept check
+
+Do not keep polishing only this first question. Build a **second independent question unit from a substantially different topic** and with a different historical-source shape.
+
+The second unit should test whether the value generalizes when:
+
+- the response structure is not necessarily Yes/No;
+- the historical voices do not form such a neat affirmative / qualified / negative trio;
+- no famous historical name is an exact match for the player's answer;
+- the source material comes from a different theological topic or period distribution.
+
+If the owner again experiences the unit as useful for clarifying and stimulating thought, the case for making independent historical-question units the project's primary product direction becomes much stronger.
 
 ## Later checks
 
