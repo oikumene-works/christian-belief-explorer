@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One question, three historical voices | Christian Belief Explorer</title>
+  <style>
+    :root {
+      font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #223047;
+      background: #f4f6f9;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    body { margin: 0; }
+
+    main {
+      width: min(100% - 2rem, 48rem);
+      margin: 2rem auto;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.22;
+      color: #172338;
+    }
+
+    h1 { font-size: clamp(1.8rem, 5vw, 2.45rem); margin: .35rem 0 .75rem; }
+    h2 { font-size: 1.45rem; margin-top: 0; }
+    h3 { font-size: 1.2rem; margin: .2rem 0 .35rem; }
+
+    p { margin: .65rem 0; }
+
+    .eyebrow, .muted, .period, .fine-print {
+      color: #5a687a;
+    }
+
+    .eyebrow {
+      font-size: .9rem;
+      font-weight: 650;
+      letter-spacing: .02em;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      max-width: 43rem;
+    }
+
+    .panel, .voice-card {
+      background: #fff;
+      border: 1px solid #d5dce6;
+      border-radius: .85rem;
+      box-shadow: 0 2px 8px rgba(30, 47, 72, .04);
+    }
+
+    .panel {
+      padding: clamp(1.1rem, 4vw, 1.55rem);
+      margin: 1.25rem 0;
+    }
+
+    .question {
+      font-size: clamp(1.15rem, 3vw, 1.35rem);
+      font-weight: 650;
+      line-height: 1.45;
+      margin: .75rem 0 1rem;
+    }
+
+    .clarification {
+      padding: .8rem 1rem;
+      border-left: .28rem solid #6a7fa6;
+      background: #f5f7fb;
+      border-radius: .35rem;
+      margin: 1rem 0;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 1.2rem 0 0;
+      padding: 0;
+    }
+
+    legend {
+      font-weight: 650;
+      margin-bottom: .55rem;
+    }
+
+    .choice {
+      display: flex;
+      gap: .8rem;
+      align-items: flex-start;
+      padding: .85rem;
+      margin: .55rem 0;
+      border: 1px solid #c8d2df;
+      border-radius: .55rem;
+      cursor: pointer;
+      transition: border-color .15s ease, background .15s ease;
+    }
+
+    .choice:hover { border-color: #6f83a1; }
+
+    .choice.selected {
+      border-color: #2857a5;
+      background: #edf3ff;
+    }
+
+    input[type="radio"] {
+      width: 1.15rem;
+      height: 1.15rem;
+      margin-top: .22rem;
+      accent-color: #2857a5;
+      flex: none;
+    }
+
+    button {
+      font: inherit;
+      color: #223047;
+      background: #fff;
+      border: 1px solid #7c8ca3;
+      border-radius: .5rem;
+      padding: .68rem 1rem;
+      cursor: pointer;
+    }
+
+    button.primary {
+      color: #fff;
+      background: #2857a5;
+      border-color: #2857a5;
+      font-weight: 650;
+    }
+
+    button.secondary { background: #f8fafc; }
+
+    button.unsettled {
+      border-style: dashed;
+      font-size: .94rem;
+    }
+
+    button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #e1a836;
+      outline-offset: 3px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+
+    [hidden] { display: none !important; }
+
+    .answer-badge, .relation {
+      display: inline-block;
+      border-radius: 999px;
+      font-size: .86rem;
+      font-weight: 700;
+      padding: .28rem .65rem;
+    }
+
+    .answer-badge {
+      background: #e8eef9;
+      color: #264e90;
+      margin-bottom: .35rem;
+    }
+
+    .voices {
+      display: grid;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .voice-card {
+      padding: 1.2rem;
+    }
+
+    .voice-card[data-tone="similar"] .relation {
+      background: #e7f4ea;
+      color: #275f35;
+    }
+
+    .voice-card[data-tone="partial"] .relation {
+      background: #fff2d7;
+      color: #775316;
+    }
+
+    .voice-card[data-tone="different"] .relation {
+      background: #f7e8e8;
+      color: #7a3333;
+    }
+
+    .voice-card[data-tone="direction"] .relation {
+      background: #e8eef9;
+      color: #264e90;
+    }
+
+    .period {
+      font-size: .92rem;
+      margin-top: 0;
+    }
+
+    .card-label {
+      font-size: .83rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: #596779;
+      margin-top: 1rem;
+      margin-bottom: .15rem;
+    }
+
+    .source-link {
+      display: inline-block;
+      margin-top: .75rem;
+      font-weight: 650;
+      color: #2458a6;
+    }
+
+    .source-link:hover { text-decoration-thickness: .14em; }
+
+    .fine-print {
+      font-size: .9rem;
+    }
+
+    .prototype-note {
+      border-top: 1px solid #d5dce6;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 34rem) {
+      main { width: min(100% - 1rem, 48rem); margin: .75rem auto 1.5rem; }
+      .panel, .voice-card { border-radius: .65rem; }
+      .actions button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Christian Belief Explorer · experimental single-question unit</p>
+  <h1>One question, three voices from Christian history</h1>
+  <p class="lead">Answer one question in your own way. Afterward, you will see how three Christian thinkers from different centuries approached the same issue. There are no scores and no tradition label.</p>
+
+  <section id="question-panel" class="panel" aria-labelledby="question-heading">
+    <h2 id="question-heading">Your question</h2>
+    <p class="question">Suppose you have studied a Bible passage carefully and still think your church explains it wrongly. Could there ever be a case where God expects you to accept your church’s explanation as right because the church has the responsibility to teach its members?</p>
+    <p class="clarification"><strong>What “accept as right” means here:</strong> believing that you ought to affirm the church’s explanation—not merely following a shared rule, keeping quiet, or listening seriously to the church’s reasons.</p>
+
+    <form id="answer-form">
+      <fieldset>
+        <legend>Choose the answer closest to your view</legend>
+        <label class="choice">
+          <input type="radio" name="answer" value="yes">
+          <span><strong>Yes.</strong> That could be a duty in at least some cases.</span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="answer" value="no">
+          <span><strong>No.</strong> The church’s role as teacher could not by itself create that duty.</span>
+        </label>
+      </fieldset>
+      <div class="actions">
+        <button id="continue" class="primary" type="submit" disabled>See the historical voices</button>
+        <button id="unsettled" class="unsettled" type="button">I have not formed a view on this</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="result" hidden tabindex="-1" aria-live="polite">
+    <section class="panel" aria-labelledby="answer-heading">
+      <span id="answer-badge" class="answer-badge"></span>
+      <h2 id="answer-heading">What your answer says</h2>
+      <p id="answer-summary"></p>
+      <p id="answer-limit" class="muted"></p>
+      <div class="actions">
+        <button id="change-answer" class="secondary" type="button">Change answer</button>
+        <button id="start-over" class="secondary" type="button">Start over</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="voices-heading">
+      <h2 id="voices-heading">Three voices from Christian history</h2>
+      <p>Everyone sees the same three voices. Your answer changes only the order and the short comparison text. Agreement on this one question does not imply agreement in theology as a whole.</p>
+      <div id="voices" class="voices"></div>
+      <p class="fine-print">These three people do not represent every Christian answer. Each card describes one bounded text or event, not the person’s entire theology.</p>
+    </section>
+  </section>
+
+  <footer class="prototype-note fine-print">
+    <p>This is a standalone concept prototype. Answers stay in this browser page and are not sent or stored.</p>
+  </footer>
+</main>
+
+<script>
+'use strict';
+
+const ANSWERS = {
+  yes: {
+    badge: 'Your answer: Yes',
+    summary: 'You think there can be at least one case where a church’s responsibility to teach creates a duty before God to accept the church’s explanation of a Bible passage, even while the member remains personally unconvinced.',
+    limit: 'This does not mean that you think every church, teacher, doctrine, or decision has that force.'
+  },
+  no: {
+    badge: 'Your answer: No',
+    summary: 'You do not think a church’s role as teacher can, by itself, make a Christian responsible before God for calling an interpretation right while the Christian still believes it is wrong.',
+    limit: 'This does not mean that you reject church teaching, Christian tradition, shared rules, or the possibility that a church could persuade you.'
+  },
+  unsettled: {
+    badge: 'Your answer: no settled view',
+    summary: 'You have not formed a settled view on this particular question.',
+    limit: 'The historical voices below show different ways Christians have approached the issue. None of them is assigned to you.'
+  }
+};
+
+const VOICES = {
+  aquinas: {
+    name: 'Thomas Aquinas',
+    period: '13th century · theologian and Dominican friar',
+    view: 'In a discussion of faith and heresy, Aquinas says a believer holds to the Church’s teaching as a divine and unfailing guide. The believer accepts what the Church teaches rather than choosing articles of faith by personal judgment.',
+    limit: 'Aquinas is discussing articles of faith and heresy. This does not show that he gave every sermon, local rule, or church statement the same force.',
+    source: 'https://www.newadvent.org/summa/3005.htm',
+    sourceLabel: 'Read the primary text: Summa Theologiae II–II, question 5, article 3'
+  },
+  calvin: {
+    name: 'John Calvin',
+    period: '16th century · reformer and pastor',
+    view: 'Calvin says church councils should not be dismissed casually. Their decisions deserve real initial weight, but they must still be tested by Scripture, which he gives the highest place.',
+    limit: 'Calvin is discussing councils and how their decisions should be examined. He does not directly answer every part of this question about a member who remains personally unconvinced.',
+    source: 'https://ccel.org/ccel/calvin/institutes.vi.x.html',
+    sourceLabel: 'Read the primary text: Institutes IV.9.8'
+  },
+  luther: {
+    name: 'Martin Luther',
+    period: '16th century · reformer and pastor',
+    view: 'At the Diet of Worms, Luther said he could not withdraw his writings unless convinced by Scripture or clear reason. He said popes and councils could err and that his conscience was bound by God’s word.',
+    limit: 'This was a statement in one major conflict. It is not a complete account of Luther’s views on churches, pastors, councils, confessions, or obedience.',
+    source: 'https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:document-4371',
+    sourceLabel: 'Read the source presentation: Luther at the Diet of Worms'
+  }
+};
+
+const PRESENTATION = {
+  yes: {
+    order: ['aquinas', 'calvin', 'luther'],
+    relation: {
+      aquinas: ['Close to your answer', 'similar', 'Aquinas gives church teaching a strong power to require assent. His statement is narrower in subject matter than a claim about every biblical interpretation.'],
+      calvin: ['Partly parallel', 'partial', 'Calvin gives established church judgment real weight, but he stops short of treating it as automatically decisive and still tests it by Scripture.'],
+      luther: ['Different direction', 'different', 'In this conflict, Luther refused to withdraw his position while he remained unconvinced by Scripture or clear reason.']
+    }
+  },
+  no: {
+    order: ['luther', 'calvin', 'aquinas'],
+    relation: {
+      luther: ['Close to your answer', 'similar', 'In this conflict, Luther would not let popes or councils override a conscience that remained unconvinced by Scripture or clear reason.'],
+      calvin: ['Partly parallel', 'partial', 'Calvin also denies that councils settle the matter automatically, while giving their decisions genuine initial weight.'],
+      aquinas: ['Different direction', 'different', 'Aquinas gives the Church’s teaching a much stronger role in what a believer ought to affirm in matters of faith.']
+    }
+  },
+  unsettled: {
+    order: ['calvin', 'aquinas', 'luther'],
+    relation: {
+      calvin: ['A qualified middle position', 'direction', 'Calvin gives church decisions real prior weight while still requiring them to be tested by Scripture.'],
+      aquinas: ['A strong Yes direction', 'direction', 'Aquinas gives the Church’s teaching a strong role in what a believer ought to affirm in matters of faith.'],
+      luther: ['A strong No direction', 'direction', 'In this conflict, Luther would not retract while Scripture or clear reason had not convinced him.']
+    }
+  }
+};
+
+const form = document.getElementById('answer-form');
+const continueButton = document.getElementById('continue');
+const unsettledButton = document.getElementById('unsettled');
+const questionPanel = document.getElementById('question-panel');
+const result = document.getElementById('result');
+const voicesElement = document.getElementById('voices');
+let currentAnswer = null;
+
+function updateChoiceStyles() {
+  document.querySelectorAll('.choice').forEach(function(label) {
+    const radio = label.querySelector('input');
+    label.classList.toggle('selected', radio.checked);
+  });
+}
+
+function makeVoiceCard(id, answer) {
+  const voice = VOICES[id];
+  const relation = PRESENTATION[answer].relation[id];
+
+  const article = document.createElement('article');
+  article.className = 'voice-card';
+  article.dataset.tone = relation[1];
+
+  const relationBadge = document.createElement('span');
+  relationBadge.className = 'relation';
+  relationBadge.textContent = relation[0];
+  article.appendChild(relationBadge);
+
+  const heading = document.createElement('h3');
+  heading.textContent = voice.name;
+  article.appendChild(heading);
+
+  const period = document.createElement('p');
+  period.className = 'period';
+  period.textContent = voice.period;
+  article.appendChild(period);
+
+  const viewLabel = document.createElement('p');
+  viewLabel.className = 'card-label';
+  viewLabel.textContent = 'What this historical voice says here';
+  article.appendChild(viewLabel);
+
+  const view = document.createElement('p');
+  view.textContent = voice.view;
+  article.appendChild(view);
+
+  const relationLabel = document.createElement('p');
+  relationLabel.className = 'card-label';
+  relationLabel.textContent = 'How it relates to your answer';
+  article.appendChild(relationLabel);
+
+  const relationText = document.createElement('p');
+  relationText.textContent = relation[2];
+  article.appendChild(relationText);
+
+  const limitLabel = document.createElement('p');
+  limitLabel.className = 'card-label';
+  limitLabel.textContent = 'Limit of the comparison';
+  article.appendChild(limitLabel);
+
+  const limit = document.createElement('p');
+  limit.textContent = voice.limit;
+  article.appendChild(limit);
+
+  const source = document.createElement('a');
+  source.className = 'source-link';
+  source.href = voice.source;
+  source.target = '_blank';
+  source.rel = 'noreferrer';
+  source.textContent = voice.sourceLabel;
+  article.appendChild(source);
+
+  return article;
+}
+
+function showResult(answer) {
+  currentAnswer = answer;
+  const copy = ANSWERS[answer];
+  document.getElementById('answer-badge').textContent = copy.badge;
+  document.getElementById('answer-summary').textContent = copy.summary;
+  document.getElementById('answer-limit').textContent = copy.limit;
+
+  voicesElement.replaceChildren();
+  PRESENTATION[answer].order.forEach(function(id) {
+    voicesElement.appendChild(makeVoiceCard(id, answer));
+  });
+
+  questionPanel.hidden = true;
+  result.hidden = false;
+  result.focus();
+}
+
+function showQuestion() {
+  result.hidden = true;
+  questionPanel.hidden = false;
+  questionPanel.scrollIntoView({ block: 'start' });
+}
+
+form.addEventListener('change', function() {
+  const selected = form.querySelector('input[name="answer"]:checked');
+  continueButton.disabled = !selected;
+  updateChoiceStyles();
+});
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const selected = form.querySelector('input[name="answer"]:checked');
+  if (selected) showResult(selected.value);
+});
+
+unsettledButton.addEventListener('click', function() {
+  showResult('unsettled');
+});
+
+document.getElementById('change-answer').addEventListener('click', function() {
+  showQuestion();
+});
+
+document.getElementById('start-over').addEventListener('click', function() {
+  currentAnswer = null;
+  form.reset();
+  continueButton.disabled = true;
+  updateChoiceStyles();
+  showQuestion();
+});
+
+updateChoiceStyles();
+</script>
+</body>
+</html>
