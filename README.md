@@ -113,6 +113,14 @@ The documentation is intended to preserve both:
 1. the current state of the design; and
 2. the reasoning and experiments that led to it.
 
+## Planned public home and languages
+
+The canonical public home of the service will be **`oikumene.works`**.
+
+The public service is intended for both Finnish- and English-speaking audiences. The two language versions should share the same source base while treating player-facing wording and explanations as language-specific editorial work.
+
+`wennström.fi` may introduce and link to the project, but it will not host a separate canonical copy of the question units.
+
 ## License
 
 Unless otherwise noted, original material in this repository is dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
