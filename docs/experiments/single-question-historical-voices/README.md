@@ -118,6 +118,27 @@ The prototype should test whether:
 - the concept remains useful when no historical voice matches the player exactly;
 - the experience makes another independent question appealing.
 
+## First hands-on result — 2026-11-20
+
+The project owner tried the completed prototype through their own genuine answer path and judged it **much better** for the original purpose of the project than the cumulative tradition-comparison approach.
+
+The value identified was not merely a simpler interface. The unit better supported:
+
+- clarification of one's own thinking;
+- comparison with how other Christians have reasoned;
+- renewed, deliberate use of reason when reflecting on matters of faith.
+
+This is a strong first product-fit signal for the independent-question historical-voices concept, but it is still based on one person and one question.
+
 ## Next step
 
-The project owner should try their own genuine answer path and assess the question, answer summary, historical cards, comparison limits, and overall value. Do not add cumulative scoring, tradition profiles, cross-question state, a historical-person database, or additional question units before evaluating this first end-to-end experience.
+Do not refine only the first question. Build a **second independent question unit from a substantially different topic** and test whether the same value appears again.
+
+The second unit should avoid simply reproducing the first prototype's convenient shape. Prefer a case where:
+
+- the faithful response structure may need more than Yes/No;
+- the historical source material is less neatly divided into affirmative, qualified, and negative positions;
+- a historical voice may illuminate the issue without closely matching the player's answer;
+- the question remains understandable without theological vocabulary.
+
+Do not add cumulative scoring, tradition profiles, cross-question state, a historical-person database, or a large question catalogue yet.
