@@ -1,6 +1,6 @@
 # Single-question historical-voices concept experiment
 
-**Status:** Working concept and source-feasibility check. Not an accepted product architecture or questionnaire decision.
+**Status:** Working concept, source-feasibility check, and first runnable prototype. Not an accepted product architecture or questionnaire decision.
 
 **Date:** 2026-11-18
 
@@ -20,11 +20,30 @@ Question units would be available in any order. An answer in one unit would not 
 
 This is a working hypothesis for prototyping, not yet an accepted project decision.
 
-## First candidate question
+## First runnable prototype
+
+- [Open the standalone prototype](../../../prototypes/single-question-historical-voices/index.html)
+- [Testing status](TESTING.md)
+
+The prototype asks one question, records **Yes**, **No**, or **no settled view**, and then shows the same three historical voices to every player. The selected answer changes only their order and the short relationship explanation. No score, tradition label, cumulative state, or historical-person profile is created.
+
+Historical names are hidden until after the player answers.
+
+## Plain-language player question
+
+The earlier research wording used terms such as *teaching authority*, *duty before God*, and *accept*. The player-facing prototype replaces that wording with ordinary language:
+
+> Suppose you have studied a Bible passage carefully and still think your church explains it wrongly. Could there ever be a case where God expects you to accept your church’s explanation as right because the church has the responsibility to teach its members?
+
+A visible clarification says that *accept as right* means believing one ought to affirm the explanation, not merely following a shared rule, keeping quiet, or listening seriously to the church's reasons.
+
+This wording is itself experimental. It must be tested with people who do not know theological terminology.
+
+## Research formulation behind the question
 
 > Can a Christian church's teaching authority ever make it a duty before God for one of its members to accept the church's interpretation of Scripture, even if that member has carefully considered the biblical text and still disagrees?
 
-Existing clarifications:
+Research clarifications:
 
 - **Ever** means at least one possible case, not every church or every teaching.
 - **Accept** means treating the teaching as something one ought to affirm, not merely following a public rule or considering the argument.
@@ -33,7 +52,7 @@ Existing clarifications:
 
 The question appears suitable for a first concept prototype because at least three historically significant voices can be connected to the issue from primary texts without presenting them as complete theological profiles.
 
-The relationship is not equally direct in every case. The prototype must distinguish a direct answer from a close historical parallel.
+The relationship is not equally direct in every case. The prototype distinguishes a strong parallel from a qualified or context-limited one.
 
 ### Thomas Aquinas — strong affirmative parallel
 
@@ -72,11 +91,11 @@ Primary-source presentation:
 
 - https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi:document-4371
 
-## Preliminary editorial model
+## Editorial model implemented
 
-All players should see the same curated historical voices after answering. The player's answer may change the ordering or the short relationship label, but opposing voices should not be hidden.
+All players see the same curated historical voices after answering. The player's answer may change the ordering and the short relationship label, but opposing voices are not hidden.
 
-A card should contain:
+Each card contains:
 
 - name, period, and context;
 - the bounded historical view;
@@ -84,18 +103,21 @@ A card should contain:
 - the most important limit of the comparison;
 - a primary-source link.
 
-Do not use percentages, "closest thinker," or language implying similarity in overall theology.
+The prototype does not use percentages, "closest thinker," or language implying similarity in overall theology.
 
 ## What this experiment tests
 
-The first end-to-end prototype should test whether:
+The prototype should test whether:
 
+- the main question is understandable without theological vocabulary;
 - one question already feels like a complete and worthwhile experience;
 - historical voices improve self-understanding rather than merely confirm the chosen answer;
 - the limits of issue-specific comparison are understandable;
+- famous names overshadow the actual view and reasoning;
 - the research effort required for one unit is proportionate to the user value;
-- the concept remains useful when no historical voice matches the player exactly.
+- the concept remains useful when no historical voice matches the player exactly;
+- the experience makes another independent question appealing.
 
 ## Next step
 
-Create one minimal browser prototype from this question and these three source cards. Do not add cumulative scoring, tradition profiles, cross-question state, a historical-person database, or additional question units yet.
+The project owner should try their own genuine answer path and assess the question, answer summary, historical cards, comparison limits, and overall value. Do not add cumulative scoring, tradition profiles, cross-question state, a historical-person database, or additional question units before evaluating this first end-to-end experience.
