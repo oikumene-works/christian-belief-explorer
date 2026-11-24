@@ -130,6 +130,35 @@ The value identified was not merely a simpler interface. The unit better support
 
 This is a strong first product-fit signal for the independent-question historical-voices concept, but it is still based on one person and one question.
 
+## Optional AI deep-research continuation
+
+A question unit may later include an optional, copyable **research prompt for an AI system**. This would extend the user's investigation without making AI necessary for the question unit itself.
+
+Design constraints:
+
+- nothing is sent automatically; the user explicitly copies the prompt and chooses where to paste it;
+- the default prompt should not include the user's selected answer unless the user deliberately chooses to include it;
+- including the answer must not turn the task into confirmation seeking—the prompt should request the strongest arguments and counterarguments for all serious positions;
+- the historical cards and their sources may be supplied as starting points, but the AI must be instructed to verify them independently and seek additional perspectives;
+- the prompt should prefer primary sources and reliable scholarship, provide exact references and links where possible, distinguish historical evidence from interpretation, and state uncertainty rather than inventing citations or quotations;
+- Finnish and English question units need separately edited prompt wording, while the underlying research structure may be shared;
+- the feature remains an optional continuation and does not alter the accepted rule that AI is not required during the player-facing question experience.
+
+A compact interface could use an expandable section titled **Explore further with AI / Tutki tekoälyn avulla**, containing a readable prompt and a **Copy research prompt** button. A separate unchecked control could add the user's answer to the copied text.
+
+The first prompt prototype should ask the AI to:
+
+1. clarify the exact question and any ambiguous terms;
+2. map the main coherent positions, including conditional or intermediate ones;
+3. present the strongest biblical, theological, historical, and philosophical arguments for each position;
+4. distinguish biblical text, historical source claims, and later interpretation;
+5. compare representative Christian voices from different periods using primary-source references;
+6. challenge the user's present answer if it is included;
+7. identify unresolved questions and evidence that could reasonably change a view;
+8. end with questions for further reflection rather than issuing a personality or tradition label.
+
+This is a working feature proposal, not a launch requirement or an accepted architecture decision.
+
 ## Next step
 
 Do not refine only the first question. Build a **second independent question unit from a substantially different topic** and test whether the same value appears again.
